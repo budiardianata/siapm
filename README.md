@@ -16,9 +16,7 @@ this theme using `(https://mdbootstrap.com/) `. Change theme in  `<body> ` class
 
 
 ### Additional Resources:
--[Starter Template by johndavemanuel](https://github.com/johndavemanuel/bootstrap-gulp-starter-template.git)
-
-### Additional Resources:
+- [Starter Template by johndavemanuel](https://github.com/johndavemanuel/bootstrap-gulp-starter-template.git)
 - [Sass: Syntactically Awesome Style Sheets](http://sass-lang.com/)
 - [Bootstrap](https://getbootstrap.com/)
 - [Handlebars](http://handlebarsjs.com/)
