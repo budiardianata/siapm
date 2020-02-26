@@ -2,7 +2,8 @@
 
 ### Note
 
-this theme using `(https://mdbootstrap.com/) `. Change theme in  `<body> ` class, list of theme class :
+This theme using `(https://mdbootstrap.com/)`. Change theme in  `<body> ` class, for example `<body class="black-skin"> `.
+list of theme class :
 -	white-skin
 -	black-skin
 -	cyan-skin
