@@ -159,7 +159,7 @@ function browserSyncInit(done) {
 function deploy() {
   return src("/*").pipe(
     ghPages({
-      remoteUrl: "https://github.com/johndavemanuel/bootstrap4-gulp-starter-template.git",
+      remoteUrl: "https://github.com/budiardianata/siapm.git",
       branch: "master",
       message: "Automated push of contents via gulp"
     })
@@ -376,5 +376,6 @@ exports.prod = series(
   renameSources,
   prettyHTML,
   generateDocs,
+  deploy,
   browserSyncInit
 );
