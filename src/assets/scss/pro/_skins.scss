@@ -1,25 +1,75 @@
 // Skins
 @each $skin,
-  $data in $skins {
+$data in $skins {
   .#{$skin}-skin {
+    a {
+      color: map-get($data, skin-primary-color);
+    }
+    .mask.rgba-gradient {
+      background: linear-gradient(45deg, rgba(map-get($data, skin-gradient-start), 0.7), rgba(map-get($data, skin-gradient-end), 0.8)); 
+    }
+    .rgba-skin,
+    .rgba-skin:after {
+      background-color: rgba(map-get($data, skin-gradient-start), 0.7); }
     .gradient {
       background: map-get($data, skin-gradient-start);
       background: linear-gradient(135deg, map-get($data, skin-gradient-start) 0%, map-get($data, skin-gradient-end) 100%);
     }
+    .text-skin{
+      color: map-get($data, skin-text) ;
+    }
+    .text-skin-accent{
+      color: darken(map-get($data, skin-accent), 5%) !important;
+    }
     .text-primary {
       color: map-get($data, skin-primary-color) !important;
     }
-    
+
     .primary-color {
       background-color: map-get($data, skin-primary-color) !important;
     }
-
+    .parallax {
+      &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: .78;
+        background-image:linear-gradient(127deg, map-get($data, skin-gradient-start) 0%, map-get($data, skin-gradient-end) 100%);
+      }
+    }
     .navbar {
       color: map-get($data, skin-text);
       background-color: map-get($data, skin-navbar);
 
+      .navbar-brand {
+        color: map-get($data, skin-text);
+        span{
+          color: darken(map-get($data, skin-accent), 5%);
+        }
+      }
+
       .navbar-nav {
         .nav-item {
+
+          &:hover,
+          &:focus {
+            color: map-get($data, skin-text);
+            background-color: darken(map-get($data, skin-accent), 5%);
+            border-radius: 10px;
+          }
+
+          &.active .nav-link {
+            color: darken(map-get($data, skin-accent), 5%);
+            font-weight: bold;
+
+            &:hover,
+            &:focus {
+              color: map-get($data, skin-text);
+              border-radius: 10px;
+            }
+          }
+
           .dropdown-menu a {
             color: $black;
 
@@ -30,9 +80,37 @@
             }
           }
 
-          @if $skin=="white" {
-            a {
-              color: map-get($data, skin-text);
+          a {
+            color: map-get($data, skin-text);
+          }
+
+        }
+      }
+
+      .mega-dropdown {
+        .dropdown-menu {
+          .container {
+            background-color: lighten(map-get($data, skin-navbar), 5%) !important;
+          }
+
+          &.mega-menu {
+            .sub-menu {
+              .sub-title {
+                color: map-get($data, skin-primary-color);
+                border-bottom: 1px solid map-get($data, skin-text);
+              }
+
+              ul {
+                li {
+                  a {
+                    color: map-get($data, skin-text);
+
+                    &:hover {
+                      background-color: rgba(0, 0, 0, .2);
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -73,7 +151,11 @@
         }
       }
     }
-
+    .welcome-area {
+      .wellcome-greetings {
+        background-image: linear-gradient(127deg, map-get($data, skin-gradient-start) 20%, map-get($data, skin-gradient-end) 100%);
+      }
+    }
     .page-footer {
       background-color: map-get($data, skin-footer-color);
     }
@@ -82,7 +164,7 @@
       background-color: map-get($data, skin-flat);
 
       .logo-wrapper {
-        & > div {
+        &>div {
           background-color: transparent !important;
         }
       }
@@ -243,7 +325,7 @@
           box-shadow: inset 0 0 0 1px map-get($data, skin-accent);
 
           // Focused label style
-          + label {
+          +label {
             color: map-get($data, skin-accent);
           }
         }
@@ -277,13 +359,13 @@
       border-color: map-get($data, skin-accent);
       box-shadow: 0 1px 0 0 map-get($data, skin-accent);
 
-      & + label {
+      &+label {
         color: map-get($data, skin-accent);
       }
     }
 
     input[type="checkbox"]:checked {
-      & + label {
+      &+label {
         &:before {
           border-right: 2px solid map-get($data, skin-accent);
           border-bottom: 2px solid map-get($data, skin-accent);
@@ -292,7 +374,7 @@
     }
 
     input[type="checkbox"].filled-in:checked {
-      & + label {
+      &+label {
         &:before {
           border-right: 2px solid $white-base;
           border-bottom: 2px solid $white-base;
@@ -324,6 +406,7 @@
                 }
               }
             }
+
             input {
               &.select-dropdown {
                 &:focus {
@@ -332,18 +415,22 @@
                 }
               }
             }
-            & + label {
+
+            &+label {
               &.active {
                 color: map-get($data, skin-accent);
               }
             }
           }
+
           .dropdown-content li {
+
             &.active,
             a,
             span:hover {
               background-color: map-get($data, skin-accent) !important;
             }
+
             &.disabled {
               &.active {
                 background-color: transparent !important;
@@ -360,7 +447,7 @@
 
     .carousel-multi-item {
 
-      .controls-top > a,
+      .controls-top>a,
       .carousel-indicators li,
       .carousel-indicators li.active {
         background-color: map-get($data, skin-accent);
@@ -370,6 +457,8 @@
     // Form-header, card-header
     .form-header,
     .card-header {
+      text-transform: capitalize;
+      color: white;
       background-color: lighten(map-get($data, skin-accent), 2%);
     }
 

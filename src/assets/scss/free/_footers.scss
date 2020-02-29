@@ -1,18 +1,58 @@
 // Footers
 footer {
   &.page-footer {
+    padding-top: 20px;
     bottom: 0;
     color: $white-base;
+
     .container-fluid {
       width: auto;
     }
+
     .footer-copyright {
       overflow: hidden;
       color: $footer-copyright-color;
       background-color: $footer-copyright-bg-color;
+
+      span {
+        padding: 0;
+        margin: 0;
+        font-size: 12px;
+        .fa{
+          animation: loves .35s infinite alternate;
+          -webkit-animation: loves .35s infinite alternate;
+          color: #E90606;
+        }
+        
+      }
     }
+
     a {
       color: $white-base;
     }
+  }
+}
+
+@keyframes loves {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+@-webkit-keyframes loves {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
   }
 }

@@ -328,7 +328,7 @@ function fullmdbjs() {
 
   return src(plugins.modules)
     .pipe(concat("base.js"))
-    .pipe(dest("dist/assets/js"));
+    .pipe(dest("src/assets/vendor/js"));
 }
 
 function getJSModules() {
@@ -338,7 +338,7 @@ function getJSModules() {
 
 
 exports.jsmdb = series(fullmdbjs, minifyScriptsmdb);
-
+exports.clean = series(cleanDist);
 // RUN ALL LINTERS
 exports.linters = series(htmlLint, scssLint, jsLint);
 
@@ -376,6 +376,5 @@ exports.prod = series(
   renameSources,
   prettyHTML,
   generateDocs,
-  deploy,
   browserSyncInit
 );

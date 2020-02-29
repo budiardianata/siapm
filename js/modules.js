@@ -2,6 +2,7 @@ exports.modules = [
   "./js/jquery.js",
   "./js/popper.js",
   "./js/bootstrap.js",
+  "./js/owl.carousel.js",
   './js/_intro-mdb-pro.js',
   './js/vendor/free/jquery.easing.js',
   './js/vendor/free/velocity.js',

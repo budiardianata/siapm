@@ -501,3 +501,15 @@ $stepper-vertical-li-after-bgc               : $stepper-horizontal-li-after-bgc 
 // Loader / Spinner
 $spinner-border-animation: spinner-border .4s linear infinite !default;
 $spinner-grow-animation: spinner-grow .4s linear infinite !default;
+
+$breakpoint-tablet: 768px;
+$breakpoint-pc: 992px;
+$text-color: rgb(58, 58, 58);
+$text-color-accent: rgb(111,111,111);
+$text-color-light: rgb(250, 250, 250) ;
+$text-color-accent-light: rgb(237, 237, 237);
+$color-primary: rgb(39,155,215) ;
+$color-primary-alpha: rgba(39,155,215,0.8);
+$color-accent: rgb(35,25,22) ;
+$color-gradient: linear-gradient(127deg, $color-accent 0%, $color-primary 100%);
+$linear-gradient: linear-gradient(to bottom, rgba(35,25,22,1), rgba(35,25,22,0.2));

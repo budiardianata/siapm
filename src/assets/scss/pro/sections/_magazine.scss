@@ -1,7 +1,29 @@
 // Magazine section
 .magazine-section {
   .single-news {
+    padding: 0;
     border-bottom: 1px solid $magazine-single-news-border-bottom;
+
+    p {
+      margin: 0;
+      margin-right: 5px;
+    }
+
+    img {
+      object-fit: cover;
+    }
+
+    .img-lg {
+      max-height: 200px;
+      width: 100%;
+    }
+
+    .img-sm {
+    
+      max-height: 50px;
+      width: 100%;
+    }
+
     &:last-of-type {
       border-bottom: none;
     }

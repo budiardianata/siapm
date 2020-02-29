@@ -1,15 +1,84 @@
 <footer class="page-footer text-center text-md-left">
+  <div class="call-to-action text-center my-4 container">
+    <div class="row">
+      <div class="col-lg-2 col-md-2 d-flex align-items-center justify-content-center">
+        <img src="https://mdbootstrap.com/img/Photos/Template/7.png" class="img-fluid px-4" alt="Logo">
+      </div>
+      <div class="col-lg-2 col-md-2 d-flex align-items-center justify-content-center">
+        <img src="https://mdbootstrap.com/img/Photos/Template/7.png" class="img-fluid px-4" alt="Logo">
+      </div>
+      <div class="col-lg-2 col-md-2 d-flex align-items-center justify-content-center">
+        <img src="https://mdbootstrap.com/img/Photos/Template/7.png" class="img-fluid px-4" alt="Logo">
+      </div>
+      <div class="col-lg-2 col-md-2 d-flex align-items-center justify-content-center">
+        <img src="https://mdbootstrap.com/img/Photos/Template/7.png" class="img-fluid px-4" alt="Logo">
+      </div>
+    </div>
+
+  </div>
   <div class="footer-copyright py-3 text-center">
-    &copy;
-    <script>document.write(new Date().getFullYear());</script>
     <a href="https://pustakadigital.co.id">Pemerintah {{base.desa}}</a>
-    <span>
-      Made with <i class="fa fa-heart pulse"></i> by <a href="https://pustakadigital.co.id" target="_blank">Pustaka Digital</a>
-    </span>
   </div>
 </footer>
 
-    <!-- build:js -->
-    <script src="{{root}}assets/vendor/js/base.js"></script>
-    <script src="{{root}}assets/js/custom.js"></script>
-    <!-- endbuild -->
+<!-- build:js -->
+<script src="{{root}}assets/vendor/js/base.js"></script>
+<script src="{{root}}assets/vendor/js/moment.min.js"></script>
+<script src="{{root}}assets/vendor/js/fullcalendar.min.js"></script>
+<script src="{{root}}assets/js/custom.js"></script>
+<!-- endbuild -->
+<script type="text/javascript">
+  jQuery(document).ready(function () {
+    Layout.init();
+    Layout.initOWL();
+    Layout.initFixHeaderWithPreHeader(); /* Switch On Header Fixing (only if you have pre-header) */
+    Layout.initNavScrolling();
+  });
+
+  jQuery(document).ready(function () {
+    var date = new Date();
+    var d = date.getDate();
+    var m = date.getMonth();
+    var y = date.getFullYear();
+    var calendar = $("#calendar").fullCalendar({
+      header: {
+        left: "prev,next",
+        center: "title",
+        right: "month,agendaWeek,agendaDay"
+      },
+      firstDay: 1,
+      editable: true,
+      eventLimit: true,
+      events: 'https://lampungbaratkab.go.id/event/datatable',
+      eventRender: function (event, element, view) {
+        if (event.allDay === 'true') {
+          event.allDay = true;
+        } else {
+          event.allDay = false;
+        }
+      },
+      selectable: true,
+      selectHelper: true,
+      select: function (start, end, jsEvent, view) {
+        var vstart = moment(start).format('YYYY-MM-DD H:mm:ss');
+        var vend = moment(end).format('YYYY-MM-DD H:mm:ss');
+        var allDay = !start.hasTime() && !end.hasTime();
+      },
+      eventDrop: function (event, delta) {
+        var start = moment(event.start).format('YYYY-MM-DD H:mm:ss');
+        var end = moment(event.end).format('YYYY-MM-DD H:mm:ss');
+        var allDay = !event.start.hasTime() && !event.end.hasTime();
+      },
+      eventClick: function (event) {
+        window.location = "https://lampungbaratkab.go.id/event/detail/" + event.id;
+      },
+      eventResize: function (event) {
+        var start = moment(event.start).format('YYYY-MM-DD H:mm:ss');
+        var end = moment(event.end).format('YYYY-MM-DD H:mm:ss');
+        var allDay = !event.start.hasTime() && !event.end.hasTime();
+      }
+    });
+  });
+
+</script>
+<script type="text/javascript" src="https://widget.kominfo.go.id/gpr-widget-kominfo.min.js"></script>

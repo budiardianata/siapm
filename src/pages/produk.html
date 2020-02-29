@@ -1,0 +1,75 @@
+---
+layout: default
+title: Produk
+desc: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, deleniti odit. Dolorum provident placeat
+image: assets/img/av.png
+---
+
+
+<section class="head">
+  <div class="container">
+    <div class="page-head row">
+      <div class="col-12  align-self-end">
+        <h1 class="h1-responsive">{{title}} Pekon</h1>
+        <div class="breadcrumb-r">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="#">Library</a></li>
+              <li class="breadcrumb-item active">Data</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="main-content">
+  <div class="container mb-5">
+    <div class="row mt-5">
+      <div class="col-12">
+        <ul class="nav md-tabs nav-justified grey lighten-3 mx-0" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active dark-grey-text font-weight-bold" data-toggle="tab" href="#bumdes" role="tab">
+              BUMDES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link dark-grey-text font-weight-bold" data-toggle="tab" href="#umkm" role="tab"> UMKM</a>
+          </li>
+        </ul>
+        <div class="tab-content px-0 pt-5">
+          <!-- Panel bumdes -->
+          <div class="tab-pane fade in show active" id="bumdes" role="tabpanel">
+            <div class="row">
+              {{#repeat 8}}
+              {{>item-product}}
+              {{/repeat}}
+            </div>
+            <div class="row">
+              <div class="col-md-12 text-center">
+                <a href="" class="btn btn-sm btn-primary waves-effect">Lebih Banyak Produk BUMDES</a>
+              </div>
+            </div>
+          </div>
+          <!-- Panel 1 bumdes-->
+  
+          <!-- Panel umkm -->
+          <div class="tab-pane fade" id="umkm" role="tabpanel">
+            <div class="row">
+              {{#repeat 8}}
+              {{>item-product}}
+              {{/repeat}}
+            </div>
+            <div class="row">
+              <div class="col-md-12 text-center">
+                <a href="" class="btn btn-sm btn-primary waves-effect">Lebih Banyak Produk UMKM</a>
+              </div>
+            </div>
+          </div>
+          <!-- Panel umkm end-->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

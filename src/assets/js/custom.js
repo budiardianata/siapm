@@ -1,11 +1,20 @@
 (function ($) {
   "use strict";
   new WOW().init();
-
-  // Material Select Initialization
-  $(document).ready(function () {
-    $('.mdb-select').material_select();
+  objectFitImages();
+  jarallax(document.querySelectorAll('.jarallax'));
+  jarallax(document.querySelectorAll('.jarallax-keep-img'), {
+      keepImg: true,
   });
+  var fcopy = document.getElementsByClassName('footer-copyright')[0];
+  var copy = "Copyright &copy; ";
+  fcopy.insertAdjacentHTML('afterbegin', copy.concat(new Date().getFullYear()).concat(" All Rights Reserved by "));
+  fcopy.insertAdjacentHTML('beforeend', "<br><span>Made with <i class='fa fa-heart pulse'></i> by <a href='https://bit.ly/3cbVfOh' target='_blank'>Pustaka Digital</a></span>");
+  var ContentLeft = document.getElementById('main-content-left').offsetHeight;
+  var scrWidth = $(window).width();
+  if (scrWidth>992) { 
+    document.getElementById("main-content-right").style.height = ContentLeft+'px';
+  }
 
   function toggleDropdown(e) {
     var _d = $(e.target).closest('.dropdown'),
@@ -21,18 +30,17 @@
   $('body')
     .on('mouseenter mouseleave', '.dropdown', toggleDropdown)
     .on('click', '.dropdown-menu a', toggleDropdown);
-  $('.welcome-bg').each(function () {
+  
+  
+  $('.parallax').each(function () {
     if ($(this).attr("data-bg")) {
       $(this).css({
-        'background': 'url(' + $(this).data('bg') + ')',
-        'background-position': 'center center',
-        'background-repeat': 'no-repeat',
-        'background-size': 'cover',
-        'background-attachment': 'scroll'
+        'background-image': 'url(' + $(this).data('bg') + ')'
       });
     }
   });
-  $('.page-cover').each(function () {
+
+  $('.p-cover').each(function () {
     if ($(this).attr("data-bg")) {
       $(this).css({
         'background': 'url(' + $(this).data('bg') + ')',
@@ -69,41 +77,10 @@
       },
 
       1366: {
-        items: 2
-      }
-    }
-  });
-
-  $('#app-carousel').owlCarousel({
-    autoplay: true,
-    lazyLoad: true,
-    loop: true,
-    margin: 20,
-    animateOut: 'fadeOut',
-    animateIn: 'fadeIn',
-    responsiveClass: true,
-    autoHeight: true,
-    autoplayTimeout: 7000,
-    smartSpeed: 800,
-    responsive: {
-      0: {
-        items: 1
-      },
-
-      600: {
-        items: 2
-      },
-
-      1024: {
-        items: 3
-      },
-
-      1366: {
         items: 3
       }
     }
   });
-
   var owl = $("#portfolio-carousel");
 
   owl.owlCarousel();
@@ -116,18 +93,6 @@
     owl.trigger('prev.owl.carousel');
   });
 
-  $('.home-services-item').each(function () {
-    if ($(this).attr("data-bg")) {
-      $(this).css({
-        'background': 'url(' + $(this).data('bg') + ')',
-        'background-position': 'center center',
-        'background-repeat': 'no-repeat',
-        'background-size': 'cover',
-        'background-attachment': 'scroll',
-        'margin': '10px;'
-      });
-    }
-  });
   //Menu On Hover
 
   $('body').on('mouseenter mouseleave', '.nav-item', function (e) {

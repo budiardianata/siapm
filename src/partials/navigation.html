@@ -1,241 +1,24 @@
-<!--Double navigation-->
 <header>
-  <nav class="navbar fixed-top navbar-toggleable-md navbar-expand-lg navbar-dark scrolling-navbar ">
-
+  <nav class="navbar fixed-top navbar-expand-lg navbar-expand-lg scrolling-navbar ">
     <div class="container">
-
       <a class="navbar-brand" href="#">
-        <img src="https://mdbootstrap.com/img/logo/mdb-transparent.png" height="30" alt="mdb logo">
+        <img class="site-logo" src="assets/img/logo.png" height="30" alt="mdb logo">
+        <p class="site-name ">{{base.desa}} <span> {{base.kecamatan}}</span></p>
       </a>
-
-      <!-- Collapse button -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
         aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
-      <!-- Links -->
       <div class="collapse navbar-collapse" id="basicExampleNav">
-
-        <!-- Left -->
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="https://mdbootstrap.com/docs/jquery/" target="_blank">jQuery</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link waves-effect" href="https://mdbootstrap.com/docs/angular/" target="_blank">Angular</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link waves-effect" href="https://mdbootstrap.com/docs/react/" target="_blank">React</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link waves-effect" href="https://mdbootstrap.com/docs/vue/" target="_blank">Vue</a>
-          </li>
-          <!-- Technology -->
-          <li class="nav-item dropdown mega-dropdown">
-            <a class="nav-link dropdown-toggle text-uppercase" id="navbarDropdownMenuLink3" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">Technology</a>
-            <div class="dropdown-menu mega-menu v-2 z-depth-1 primary-color-dark py-5 px-3"
-              aria-labelledby="navbarDropdownMenuLink3">
-              <div class="row">
-                <div class="col-md-12 col-xl-4 sub-menu mb-xl-0 mb-4">
-                  <h6 class="sub-title text-uppercase font-weight-bold white-text">Featured</h6>
-                  <!--Featured image-->
-                  <a href="#!" class="view overlay z-depth-1 p-0 mb-2">
-                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/Work/8-col/img%20(37).jpg" class="img-fluid"
-                      alt="First sample image">
-                    <div class="mask rgba-white-slight"></div>
-                  </a>
-                  <a class="news-title font-weight-bold pl-0" href="#!">Lorem ipsum dolor sit</a>
-                  <p class="font-small text-uppercase white-text">
-                    <i class="fas fa-clock-o pr-2" aria-hidden="true"></i>July 17, 2017 / <i
-                      class="far fa-comments px-1" aria-hidden="true"></i> 20
-                  </p>
-                </div>
-                <div class="col-md-6 col-xl-4 sub-menu mb-md-0 mb-4">
-                  <h6 class="sub-title text-uppercase font-weight-bold white-text">Related</h6>
-                  <ul class="list-unstyled">
-                    <li>
-                      <a class="menu-item pl-0" href="#!">
-                        <i class="fas fa-caret-right pl-1 pr-3"></i>Quis nostrud exercitation
-                      </a>
-                    </li>
-                    <li>
-                      <a class="menu-item pl-0" href="#!">
-                        <i class="fas fa-caret-right pl-1 pr-3"></i>Duis aute irure dolor in
-                      </a>
-                    </li>
-                    <li>
-                      <a class="menu-item pl-0" href="#!">
-                        <i class="fas fa-caret-right pl-1 pr-3"></i>Laboris nisi ut aliquip ex ea commodo consequat
-                      </a>
-                    </li>
-                    <li>
-                      <a class="menu-item pl-0" href="#!">
-                        <i class="fas fa-caret-right pl-1 pr-3"></i>Reprehenderit in voluptate
-                      </a>
-                    </li>
-                    <li>
-                      <a class="menu-item pl-0" href="#!">
-                        <i class="fas fa-caret-right pl-1 pr-3"></i>Esse cillum dolore eu fugiat nulla pariatur
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-md-6 col-xl-4 sub-menu mb-0">
-                  <h6 class="sub-title text-uppercase font-weight-bold white-text">Design</h6>
-                  <ul class="list-unstyled">
-                    <li>
-                      <a class="menu-item pl-0" href="#!">
-                        <i class="fas fa-caret-right pl-1 pr-3"></i>Excepteur sint occaecat
-                      </a>
-                    </li>
-                    <li>
-                      <a class="menu-item pl-0" href="#!">
-                        <i class="fas fa-caret-right pl-1 pr-3"></i>Sunt in culpa qui officia
-                      </a>
-                    </li>
-                    <li>
-                      <a class="menu-item pl-0" href="#!">
-                        <i class="fas fa-caret-right pl-1 pr-3"></i>Sed ut perspiciatis unde omnis iste natus error
-                      </a>
-                    </li>
-                    <li>
-                      <a class="menu-item pl-0" href="#!">
-                        <i class="fas fa-caret-right pl-1 pr-3"></i>Mollit anim id est laborum
-                      </a>
-                    </li>
-                    <li>
-                      <a class="menu-item pl-0" href="#!">
-                        <i class="fas fa-caret-right pl-1 pr-3"></i>Accusantium doloremque laudantium
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="nav-item dropdown mega-dropdown">
-            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">News
-              <span class="sr-only">(current)</span>
-            </a>
-            <div class="dropdown-menu mega-menu v-1 z-depth-1 white py-5 px-3"
-              aria-labelledby="navbarDropdownMenuLink1">
-              <div class="row">
-                <div class="col-md-5 col-xl-3 sub-menu mb-xl-0 mb-5">
-                  <ul class="list-unstyled">
-                    <li class="sub-title text-uppercase">
-                      <a class="menu-item pl-1 mt-2" href="#!">
-                        Laptops
-                      </a>
-                    </li>
-                    <li class="sub-title text-uppercase">
-                      <a class="menu-item pl-1 mt-2" href="#!">
-                        Phones
-                      </a>
-                    </li>
-                    <li class="sub-title text-uppercase">
-                      <a class="menu-item pl-1 mt-2" href="#!">
-                        Lifestyle
-                      </a>
-                    </li>
-                    <li class="sub-title text-uppercase">
-                      <a class="menu-item pl-1 mt-2" href="#!">
-                        Technology
-                      </a>
-                    </li>
-                    <li class="sub-title text-uppercase">
-                      <a class="menu-item pl-1 mt-2" href="#!">
-                        Design
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-md-7 col-xl-4 sub-menu mb-xl-0 mb-4">
-                  <h6 class="sub-title pb-3 text-uppercase font-weight-bold">Featured</h6>
-                  <!--Featured image-->
-                  <a href="#!" class="view overlay z-depth-1 p-0 my-3">
-                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/Work/6-col/img%20(42).jpg" class="img-fluid"
-                      alt="First sample image">
-                    <div class="mask rgba-white-slight"></div>
-                  </a>
-                  <a class="news-title font-weight-bold pl-0" href="#!">Lorem ipsum dolor sit amet, consectetur
-                    isum adipisicing elit.</a>
-                  <p class="font-small text-uppercase text-muted">By <a class="p-0 m-sm" href="#!">Anna Doe</a> -
-                    July 15, 2017</p>
-                </div>
-                <div class="col-md-12 col-xl-5 sub-menu mb-md-0 mb-xl-0 mb-4">
-                  <h6 class="sub-title pb-3 text-uppercase font-weight-bold">Design</h6>
-                  <div class="news-single">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <!--Image-->
-                        <a href="#!" class="view overlay z-depth-1 p-0 my-3">
-                          <img src="https://mdbootstrap.com/img/Photos/Horizontal/Work/6-col/img%20(43).jpg"
-                            class="img-fluid" alt="First sample image">
-                          <div class="mask rgba-white-slight"></div>
-                        </a>
-                      </div>
-                      <div class="col-md-8">
-                        <a class="news-title smaller mt-md-2 pl-0" href="#!">Duis aute irure dolor reprehenderit in
-                          voluptate.</a>
-                        <p class="font-small text-uppercase text-muted">July 14, 2017</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="news-single">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <!--Image-->
-                        <a href="#!" class="view overlay z-depth-1 p-0 mb-3 mt-4">
-                          <img src="https://mdbootstrap.com/img/Photos/Horizontal/Work/6-col/img%20(44).jpg"
-                            class="img-fluid" alt="First sample image">
-                          <div class="mask rgba-white-slight"></div>
-                        </a>
-                      </div>
-                      <div class="col-md-8">
-                        <a class="news-title smaller mt-md-2 pl-0" href="#!">Tempore autem reiciendis iste nam
-                          dicta.</a>
-                        <p class="font-small text-uppercase text-muted">July 14, 2017</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="news-single">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <!--Image-->
-                        <a href="#!" class="view overlay z-depth-1 p-0 mb-3 mt-4">
-                          <img src="https://mdbootstrap.com/img/Photos/Horizontal/Work/6-col/img%20(41).jpg"
-                            class="img-fluid" alt="First sample image">
-                          <div class="mask rgba-white-slight"></div>
-                        </a>
-                      </div>
-                      <div class="col-md-8">
-                        <a class="news-title smaller mt-2 pl-0" href="#!">Eligendi dicta sunt amet, totam ea
-                          recusandae.</a>
-                        <p class="font-small text-uppercase text-muted">July 14, 2017</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
+        <ul class="navbar-nav ml-auto mr-3">
+          {{>nav-menu}}
         </ul>
 
-        <!-- Right -->
         <ul class="navbar-nav nav-flex-icons">
           <li class="nav-item">
             <a href="https://mdbootstrap.com/docs/jquery/newsletter/"
-              class="nav-link border border-light primary-color rounded waves-effect mr-2" target="_blank">
-              <i class="fas fa-envelope mr-1"></i>Newsletter
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="https://mdbootstrap.com/docs/jquery/newsletter/"
-              class="btn btn-sm btn-secondary rounded waves-effect mr-2" target="_blank">
-              <i class="fas fa-envelope mr-1"></i>Layanan
+              class="btn btn-outline-info btn-sm waves-effect rounded waves-effect mr-2" target="_blank">
+              <i class="fas fa-book mr-1"></i> Layanan
             </a>
           </li>
         </ul>
@@ -246,4 +29,3 @@
 
   </nav>
 </header>
-<!--/.Double navigation-->
