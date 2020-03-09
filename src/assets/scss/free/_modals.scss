@@ -167,35 +167,36 @@ body {
 .modal {
   padding-right: 0 !important;
   .modal-dialog {
+    &.modal-top {
+      top: 0;
+    }
+    &.modal-left {
+      left: 0;
+    }
+    &.modal-right {
+      right: 0;
+    }
+    &.modal-bottom {
+      bottom: 0;
+    }
+    &.modal-top-left {
+      top: $modal-distance;
+      left: $modal-distance;
+    }
+    &.modal-top-right {
+      top: $modal-distance;
+      right: $modal-distance;
+    }
+    &.modal-bottom-left {
+      bottom: $modal-distance;
+      left: $modal-distance;
+    }
+    &.modal-bottom-right {
+      right: $modal-distance;
+      bottom: $modal-distance;
+    }
     @media (min-width: 768px) {
-      &.modal-top {
-        top: 0;
-      }
-      &.modal-left {
-        left: 0;
-      }
-      &.modal-right {
-        right: 0;
-      }
-      &.modal-bottom {
-        bottom: 0;
-      }
-      &.modal-top-left {
-        top: $modal-distance;
-        left: $modal-distance;
-      }
-      &.modal-top-right {
-        top: $modal-distance;
-        right: $modal-distance;
-      }
-      &.modal-bottom-left {
-        bottom: $modal-distance;
-        left: $modal-distance;
-      }
-      &.modal-bottom-right {
-        right: $modal-distance;
-        bottom: $modal-distance;
-      }
+     
     }
   }
   &.fade {
@@ -212,7 +213,6 @@ body {
       transform: $modal-fade-bottom-transform;
     }
   }
-  @media (min-width: $medium-screen) {
     &.modal-scrolling {
       position: relative;
       .modal-dialog {
@@ -289,5 +289,4 @@ body {
       width: $modal-width;
       margin: 0;
     }
-  }
 }

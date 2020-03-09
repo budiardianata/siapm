@@ -12,7 +12,7 @@ image: assets/img/av.png
         <div class="card z-depth-1 gradient  wow fadeIn ">
           <div class="card-body p-0">
             <div class="row mx-0 wow zoomIn">
-              <div class="col-6 col-md-2 mb-3 mt-3 text-center">
+              <div class="col-6 col-md-2 mb-3 mt-3 text-center ">
                 <a href="#!" class="card zoomable ">
                   <div class="card-body" <p><i class="fa fa-pie-chart fa-2x text-primary"></i></p>
                     <h5 class="mb-0">Statistik</h5>
@@ -20,7 +20,7 @@ image: assets/img/av.png
                 </a>
               </div>
               <div class="col-6 col-md-2 mb-3 mt-3 text-center">
-                <a href="#!" class="card zoomable">
+                <a href="layanan.html" class="card zoomable">
                   <div class="card-body ">
                     <p><i class="fas fa-book fa-2x text-primary"></i></p>
                     <h5 class="mb-0">Layanan</h5>
@@ -67,7 +67,7 @@ image: assets/img/av.png
     <div class="row mt-5">
       <div id="main-content-left" class="col-md-8">
         <div class="row">
-          <div id="greeting-slide" class="carousel no-flex slide" data-ride="carousel">
+          <div id="greeting-slide" class="carousel no-flex slide wow fadeIn" data-ride="carousel">
             <ol class="carousel-indicators">
               <li data-target="#greeting-slide" data-slide-to="0" class="active primary-color"></li>
               <li data-target="#greeting-slide" data-slide-to="1" class="primary-color"></li>
@@ -183,7 +183,7 @@ image: assets/img/av.png
               <h2 class="font-weight-bold mb-4 pb-2 text-primary">Kabar Pekon</h2>
               <div class="row">
                 <div class="col-lg-6 col-md-12 mb-4">
-                  <div class="single-news">
+                  <div class="single-news wow fadeIn">
                     <div class="view overlay rounded z-depth-1-half mb-4">
                       <img class="img-fluid img-lg"
                         src="https://upload.wikimedia.org/wikipedia/id/a/aa/Lambang_Kabupaten_Lampung_Barat.jpg"
@@ -221,10 +221,10 @@ image: assets/img/av.png
       {{>sidebar-home}}
     </div>
   </div>
-  <div class="parallax portfolio" data-bg="http://rakyatjateng.fajar.co.id/wp-content/uploads/2017/08/70.jpg">
+  <div class="parallax" data-bg="http://rakyatjateng.fajar.co.id/wp-content/uploads/2017/08/70.jpg">
     <div class="container-fluid ">
-      <div class="row portfolio-content p-5">
-        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 align-self-center text-light pl-5">
+      <div class="row  p-5">
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 align-self-center text-light pl-5 wow fadeIn">
           <h2 class="font-weight-bold mb-2 text-primary">Galeri Pekon</h2>
           <p class="section-sub-title">Dokumentasi Kegiatan-kegiatan {{base.desa}} </p>
           <a class="btn btn-outline-primary btn-md btn-rounded prev-portofolio"><i class="fa fa-arrow-left"
@@ -233,9 +233,9 @@ image: assets/img/av.png
               aria-hidden="true"></i></a>
         </div>
         <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 align-self-center">
-          <div id="portfolio-carousel" class="portfolio-carousel owl-carousel owl-theme text-center">
+          <div id="galery-slide" class="owl-carousel owl-theme text-center">
             {{#repeat 6}}
-            <div class="item ">
+            <div class="item wow fadeIn">
               {{>item-gallery}}
             </div>
             {{/repeat}}
@@ -244,10 +244,10 @@ image: assets/img/av.png
       </div>
     </div>
   </div>
+
   <div class="container my-5">
-    <section>
-      <h2 class="text-center font-weight-bold mb-4 pb-2 text-primary">Produk {{base.desa}}</h2>
-      <ul class="nav md-tabs nav-justified grey lighten-3 mx-0" role="tablist">
+    <h2 class="text-center font-weight-bold mb-4 pb-2 text-primary wow fadeIn ">Produk {{base.desa}}</h2>
+      <ul class="nav md-tabs nav-justified grey lighten-3 mx-0 wow fadeInRight"  role="tablist">
         <li class="nav-item">
           <a class="nav-link active dark-grey-text font-weight-bold" data-toggle="tab" href="#bumdes" role="tab">
             BUMDES</a>
@@ -256,9 +256,9 @@ image: assets/img/av.png
           <a class="nav-link dark-grey-text font-weight-bold" data-toggle="tab" href="#umkm" role="tab"> UMKM</a>
         </li>
       </ul>
-      <div class="tab-content px-0 pt-5">
+      <div class="tab-content px-0 pt-5 wow fadeInRight">
         <!-- Panel bumdes -->
-        <div class="tab-pane fade in show active" id="bumdes" role="tabpanel">
+        <div class="tab-pane fade in show active " id="bumdes" role="tabpanel">
           <div class="row">
             {{#repeat 4}}
             {{>item-product}}
@@ -274,7 +274,7 @@ image: assets/img/av.png
 
         <!-- Panel umkm -->
         <div class="tab-pane fade" id="umkm" role="tabpanel">
-          <div class="row">
+          <div class="row ">
             {{#repeat 4}}
             {{>item-product}}
             {{/repeat}}
@@ -287,6 +287,5 @@ image: assets/img/av.png
         </div>
         <!-- Panel umkm end-->
       </div>
-    </section>
   </div>
 </section>

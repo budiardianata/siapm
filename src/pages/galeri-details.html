@@ -1,0 +1,56 @@
+---
+layout: default
+title: Judul
+desc: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, deleniti odit. Dolorum provident placeat
+image: assets/img/av.png
+---
+<section class="head">
+  <div class="container">
+    <div class="page-head row">
+      <div class="col-12  align-self-end">
+        <h1 class="h1-responsive">{{title}} Galeri</h1>
+        <div class="breadcrumb-r">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="#">Library</a></li>
+              <li class="breadcrumb-item active">Data</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="main-content">
+  <div class="container mb-5">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- JANGAN DI HAPUS -->
+        <div id="popupGalery" />
+      </div>
+      <!-- JANGAN DI HAPUS -->
+
+      <div class="mdb-lightbox ">
+        {{#repeat 8}}
+        <figure class="col-6 col-md-4">
+          <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(117).jpg" data-size="1600x1067">
+            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(117).jpg" class="img-fluid img-lg" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit.">
+          </a>
+          <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus nobis sit veritatis
+            cumque!</figcaption>
+        </figure>
+        <figure class="col-6 col-md-4">
+          <a href="https://lampungbaratkab.go.id/po-content/uploads/polish_20200303_145555708.jpg" data-size="1600x1067">
+            <img src="https://lampungbaratkab.go.id/po-content/uploads/polish_20200303_145555708.jpg" class="img-fluid img-lg" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit.">
+          </a>
+          <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus nobis sit veritatis
+            cumque!</figcaption>
+        </figure>
+        {{/repeat}}
+      </div>
+    </div>
+  </div>
+  </div>
+</section>

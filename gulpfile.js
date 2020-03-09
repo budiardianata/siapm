@@ -181,8 +181,15 @@ function copyImages() {
 // PLACES FONT FILES IN THE DIST FOLDER
 function copyFont() {
   console.log("---------------COPYING FONTS INTO DIST FOLDER---------------");
-  return src(["node_modules/@fortawesome/fontawesome-free/webfonts/*"])
+  return src(["node_modules/@fortawesome/fontawesome-free/webfonts/*","src/assets/font/roboto/*"])
     .pipe(dest("dist/assets/webfonts"))
+    .pipe(browserSync.stream());
+}
+
+function copyAddons() {
+  console.log("---------------COPYING FONTS INTO DIST FOLDER---------------");
+  return src(["src/assets/addons/*"])
+    .pipe(dest("dist/assets/addons"))
     .pipe(browserSync.stream());
 }
 
@@ -350,6 +357,7 @@ exports.dev = series(
   cleanDist,
   fullmdbjs,
   copyFont,
+  copyAddons,
   jsVendor,
   cssVendor,
   copyImages,
@@ -367,6 +375,7 @@ exports.prod = series(
   cleanDist,
   compileSCSS,
   copyFont,
+  copyAddons,
   copyImages,
   compileHTML,
   fullmdbjs,

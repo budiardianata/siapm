@@ -1,7 +1,8 @@
 // Footers
 footer {
+  box-shadow: $z-depth-1-half;
   &.page-footer {
-    padding-top: 20px;
+    padding-top: 10px;
     bottom: 0;
     color: $white-base;
 
@@ -13,7 +14,9 @@ footer {
       overflow: hidden;
       color: $footer-copyright-color;
       background-color: $footer-copyright-bg-color;
-
+      @media (max-width: 768px) {
+        font-size: small;
+      }
       span {
         padding: 0;
         margin: 0;
