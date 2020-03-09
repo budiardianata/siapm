@@ -48,4 +48,5 @@ package-lock.json
 
 ### Custom Files ###
 dist/
+js/
 accessibility-reports/
