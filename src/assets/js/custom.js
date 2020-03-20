@@ -1,5 +1,21 @@
-(function($) {
+(function ($) {
   "use strict";
+  $(document).ready(() => {
+    $('.mdb-select').materialSelect({});
+    $(".button-collapse").sideNav();
+    new WOW().init();
+  });
+  $('.count').each(function () {
+    var size = $(this).text().split(".")[1] ? $(this).text().split(".")[1].length : 0;
+    $(this).prop('Counter', 0).animate({
+      Counter: $(this).text()
+    }, {
+      duration: 2000,
+      step: function (func) {
+        $(this).text(parseFloat(func).toFixed(size));
+      }
+    });
+  });
   new WOW().init();
   objectFitImages();
   jarallax(document.querySelectorAll(".jarallax"));
@@ -28,12 +44,45 @@
     "beforeend",
     "<br><span>Made with <i class='fa fa-heart pulse'></i> by <a href='https://bit.ly/3cbVfOh' target='_blank'>Pustaka Digital</a></span>"
   );
+  // Collapsible Card
+  $('a[data-action="collapse"]').on("click", function (e) {
+    e.preventDefault();
+    $(this)
+      .closest(".card")
+      .children(".card-content")
+      .collapse("toggle");
+    $(this)
+      .closest(".card")
+      .find('[data-action="collapse"]')
+      .toggleClass("rotate");
+  });
+  $('[data-toggle="tooltip"]').tooltip()
+  // Toggle fullscreen
+  $('a[data-action="expand"]').on("click", function (e) {
+    e.preventDefault();
+    $(this)
+      .closest(".card")
+      .find('[data-action="expand"] i')
+      .toggleClass("fa-expand fa-compress");
+    $(this)
+      .closest(".card")
+      .toggleClass("card-fullscreen");
+  });
+  // Close Card
+  $('a[data-action="close"]').on("click", function () {
+    $(this).closest(".card").removeClass().slideUp("fast");
+  });
+  $(".heading-elements-toggle").on("click", function () {
+    $(this)
+      .next(".heading-elements")
+      .toggleClass("visible");
+  });
 
   function toggleDropdown(e) {
     var _d = $(e.target).closest(".dropdown"),
       _m = $(".dropdown-menu", _d);
     setTimeout(
-      function() {
+      function () {
         var shouldOpen = e.type !== "click" && _d.is(":hover");
         _m.toggleClass("show", shouldOpen);
         _d.toggleClass("show", shouldOpen);
@@ -42,19 +91,33 @@
       e.type === "mouseleave" ? 300 : 0
     );
   }
-
+  $(document).ready(function () {
+    $("#searchKecDes").on("keyup", function () {
+      var value = $(this).val().toLowerCase();
+      $("#dtKecDes *").filter(function () {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+  });
   $("body")
     .on("mouseenter mouseleave", ".dropdown", toggleDropdown)
     .on("click", ".dropdown-menu a", toggleDropdown);
 
-  $(".parallax").each(function() {
+  $(".parallax").each(function () {
     if ($(this).attr("data-bg")) {
       $(this).css({
         "background-image": "url(" + $(this).data("bg") + ")"
       });
     }
   });
-  $(".services").each(function() {
+  $(".wellcome").each(function () {
+    if ($(this).attr("data-bg")) {
+      $(this).css({
+        "background-image": "url(" + $(this).data("bg") + ")"
+      });
+    }
+  });
+  $(".services").each(function () {
     if ($(this).attr("data-bg")) {
       $(this).css({
         "background-image": "url(" + $(this).data("bg") + ")"
@@ -121,17 +184,83 @@
     }
   });
 
-  $(".next-portofolio").click(function() {
+  $(".next-portofolio").click(function () {
     owl.trigger("next.owl.carousel");
   });
-  $(".prev-portofolio").click(function() {
+  $(".prev-portofolio").click(function () {
     owl.trigger("prev.owl.carousel");
   });
   var script = document.createElement('script');
-script.onload = function () {
+  script.onload = function () {
     //do stuff with the script
-};
-script.src = "https://widget.kominfo.go.id/gpr-widget-kominfo.min.js";
+  };
+  script.src = "https://widget.kominfo.go.id/gpr-widget-kominfo.min.js";
 
-document.body.appendChild(script);
+  document.body.appendChild(script);
+
+  $(document).ready(function () {
+
+    $("#statistikTab a[href='#kependudukan']").tab('show');
+    $('a[data-toggle="tab"]').one('show.bs.tab', function (e) {
+      var dataID = $(e.target).attr("data-id");
+      var dataType = $(e.target).attr("data-type");
+      switch ($(e.target).attr("href")) {
+        case '#kependudukan':
+          getKependudukan(dataID, dataType);
+        break;
+        case '#kemiskinan':
+          getKemiskinan(dataID, dataType);
+        break;
+        case '#peristiwa':
+          getPeristiwa(dataID, dataType);
+        break;
+        default:
+          console.log('undefined');
+      }
+    });
+
+    function getKependudukan(id, type) {
+      //variable ID untuk nentuin id desa atau id kecamatan
+      //variable TIPE untuk nentuin (desa, kecamatan, kabupaten)
+
+      if ($('#grafik_pendidikan').length > 0) {
+        var pieChartctx = $("#grafik_pendidikan");
+        var chartTitle = 'GRAFIK PENDIDIKAN BERDASARKAN DATA PEKON YANG BARU TERINTEGRASI';
+        var chartLabels = ["Tdk/Blm Sekolah", "Blm Tamat SD", "SD", 'SLTP', 'SLTA', 'D I/II', 'D III', 'D IV /S1', 'S II', 'S III'];
+        var chartData = [6817491, 3503427, 11126412, 5507279, 4976259, 110969, 309772, 821653, 41587, 2441];
+        var pieChartconfig = {
+          type: 'pie',
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            responsiveAnimationDuration: 500,
+            title: {
+              display: true,
+              text: chartTitle
+            }
+          },
+          data: {
+            labels: chartLabels,
+            datasets: [{
+              data: chartData,
+              backgroundColor: palette('totol-sql', chartData.length).map(function (hex) {
+                return '#' + hex;
+              }),
+            }]
+          }
+        };
+        new Chart(pieChartctx, pieChartconfig);
+      }
+    }
+
+    function getKemiskinan(id, type) {
+      console.log('getKemiskinan');
+      console.log(id, type);
+    }
+
+    function getPeristiwa(id, type) {
+      console.log('getPeristiwa');
+      console.log(id, type);
+    }
+  });
 })(jQuery);

@@ -7,6 +7,88 @@
     border: 1px solid $grey-base;
     box-shadow: none;
   }
+  //fullscreen card
+	&.card-fullscreen {
+	  display: block;
+	  z-index: 9999;
+	  position: fixed;
+	  width: 100% !important;
+	  height: 100% !important;
+	  top: 0;
+	  right: 0;
+	  left: 0;
+	  bottom: 0;
+	  overflow: auto;
+  }
+  .card-header {
+	  .heading-elements,
+	  .heading-elements-toggle{
+			background-color: inherit;
+		  position: absolute;
+		  top: 17px;
+      right: 21px;
+      cursor: pointer;
+		  &.heading-top-elements{
+		  	// top: 0px;
+		  	.page-item{
+		  		display: inline-block
+		  	}
+		  }
+
+		  a{
+        padding: 0;
+        padding-left: 8px;
+		  	&.btn{
+					padding-top:6px;
+					padding-bottom:6px;
+        }
+        &[data-action="collapse"]{
+          i{
+              transition: all .25s ease-out;
+              display: inline-block;
+          }
+          &.rotate{
+            i{
+              transform: rotate(-180deg);
+            }
+          }
+        }
+		  }
+    }
+    @include media-breakpoint-down(md) {
+      .heading-elements{
+        text-align: center;
+        .list-inline{
+          display: none;
+        }
+        &.visible{
+          top: 22px !important;
+          display: block;
+          margin-top: 0;
+          top: 100%;
+          top: 50px;
+          height: auto;
+          left: 0px;
+          // padding: 10px;
+          z-index: 997;
+          position: absolute;
+          width: 100%;
+          .list-inline{
+            background-color: $white;
+            display: block;
+            position: absolute;
+            top: 12px;
+            right: 15px;
+          }
+        }
+      }
+    }
+    @include media-breakpoint-up(lg) {
+      .heading-elements-toggle{
+        display: none;
+      }
+    }
+	}
   .card-body {
     h1, h2, h3, h4, h5, h6 {
       font-weight: 400;

@@ -1,0 +1,141 @@
+---
+layout: sidelayout
+title: Statistik Kabupaten Lampung Barat
+desc: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, deleniti odit. Dolorum provident placeat
+image: assets/img/av.png
+---
+
+<div class="container-fluid main-content">
+  <div class="row mx-0 wow zoomIn">
+    <div class="col-6 col-md-3 mx-auto mb-3 mt-3">
+      <div class="card card-count">
+        <div class="card-body">
+          <i class="fa fa-user fa-3x text-primary"></i>
+          <p class="count-p" class="mb-0">Kepala Keluarga
+            <span class="count text-primary">2</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-md-3 mx-auto mb-3 mt-3">
+      <div class="card card-count">
+        <div class="card-body">
+          <i class="fa fa-users fa-3x text-info"></i>
+          <p class="count-p" class="mb-0">Penduduk
+            <span class="count text-info">20</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-md-3 mx-auto mb-3 mt-3">
+      <div class="card card-count">
+        <div class="card-body">
+          <i class="fas fa-male fa-3x text-default"></i>
+          <p class="count-p" class="mb-0">Laki Laki
+            <span class="count text-default">1000</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-md-3 mx-auto mb-3 mt-3">
+      <div class="card card-count">
+        <div class="card-body">
+          <i class="fas fa-female fa-3x text-secondary"></i>
+          <p class="count-p" class="mb-0">Perempuan
+            <span class="count text-secondary">50</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-12">
+      <ul class="nav nav-tabs nav-justified  primary-color md-tabs nav-flex-icons" id="statistikTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link" id="kependudukan-tab" data-id="123" data-type="kec" data-toggle="tab" href="#kependudukan"
+            role="tab" aria-controls="kependudukan" aria-selected="true"><i class="fas fa-users mr-1"></i><span
+              class="clearfix d-none d-sm-inline-block">Kependudukan</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="kemiskinan-tab" data-id="456" data-type="kec" data-toggle="tab" href="#kemiskinan"
+            role="tab" aria-controls="kemiskinan" aria-selected="false"><i class="fas fa-heart-broken mr-1"></i><span
+              class="clearfix d-none d-sm-inline-block">Kemiskinan</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="peristiwa-tab" data-id="789" data-type="kec" data-toggle="tab" href="#peristiwa"
+            role="tab" aria-controls="peristiwa" aria-selected="false"><i class="fas fa-hiking mr-1"></i> <span
+              class="clearfix d-none d-sm-inline-block">Peristiwa</span></a>
+        </li>
+      </ul>
+      <div class="tab-content card pt-5" id="myTabContentJust">
+        <div class="tab-pane fade" id="kependudukan" role="tabpanel" aria-labelledby="kependudukan-tab">
+          <div class="row">
+            <!--Grafik Card-->
+            <div class="col-md-6 mb-4">
+              <div class="card">
+                <div class="card-header grey lighten-4 text-primary">
+                  <span class="card-title">USIA</span>
+                  <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a>
+                  <div class="heading-elements">
+                    <ul class="list-inline mb-0">
+                      <li class="list-inline-item"><a data-action="collapse"><i class="fas fa-angle-down"></i></a></li>
+                      <li class="list-inline-item"><a data-action="expand" data-toggle="tooltip" title="fullscreen"><i
+                            class="fas fa-expand"></i></a></li>
+                      <li class="list-inline-item"><a data-action="close" data-toggle="tooltip" title="hapus"><i
+                            class="fas fa-times"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="card-content collapse show">
+                  <div class="card-body ">
+                    <div class="height-300 text-center justify-content-center">
+                      <canvas id="grafik_pendidikan"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--end Grafik Card-->
+            <!--Grafik Card-->
+            <div class="col-md-6 mb-4">
+              <div class="card">
+                <div class="card-header grey lighten-4 text-primary">
+                  <span class="card-title">Pendidikan</span>
+                  <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a>
+                  <div class="heading-elements">
+                    <ul class="list-inline mb-0">
+                      <li class="list-inline-item"><a data-action="collapse"><i class="fas fa-angle-down"></i></a></li>
+                      <li class="list-inline-item"><a data-action="expand" data-toggle="tooltip" title="fullscreen"><i
+                            class="fas fa-expand"></i></a></li>
+                      <li class="list-inline-item"><a data-action="close" data-toggle="tooltip" title="hapus"><i
+                            class="fas fa-times"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="card-content collapse show">
+                  <div class="card-body ">
+                    <div class="height-300 text-center justify-content-center">
+                      <canvas id="grafik_pendidikan"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--end Grafik Card-->
+          </div>
+        </div>
+        <div class="tab-pane fade" id="kemiskinan" role="tabpanel" aria-labelledby="kemiskinan-tab">
+        </div>
+        <div class="tab-pane fade" id="peristiwa" role="tabpanel" aria-labelledby="peristiwa-tab">
+          <p> peristiwa Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo
+            retro
+            fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone
+            skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings
+            gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork
+            biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl
+            craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

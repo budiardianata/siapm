@@ -1,0 +1,77 @@
+---
+layout: siapm
+title: Produk
+desc: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, deleniti odit. Dolorum provident placeat
+image: assets/img/av.png
+---
+
+<section class="main-content">
+  <div class="container mb-5">
+    <div class="page-head row">
+      <div class="col-12  align-self-end">
+        <h1 class="h1-responsive">{{title}} Pekon</h1>
+        <div class="breadcrumb-r">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="#">Library</a></li>
+              <li class="breadcrumb-item active">Data</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-12">
+        <div class="accordion md-accordion accordion-blocks" id="accordionEx78" role="tablist"
+          aria-multiselectable="true">
+          <div class="card">
+            <div class="card-header" role="tab" id="filterproduk">
+              <a data-toggle="collapse" data-parent="#accordionEx78" href="#collapseUnfiled" aria-expanded="true"
+                aria-controls="collapseUnfiled">
+                <h5 class="mt-1 mb-0">
+                  <i class="fas fa-filter mr-3 float-left"></i>
+                  <span>Filter Produk</span>
+                  <i class="fas fa-angle-down rotate-icon"></i>
+                </h5>
+              </a>
+            </div>
+            <div id="collapseUnfiled" class="collapse" role="tabpanel" aria-labelledby="filterproduk"
+              data-parent="#accordionEx78">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-12 col-sm-6 col-lg-6">
+                    <select class="mdb-select" searchable="Cari..">
+                      <option value="1" disabled selected>Pekon</option>
+                      <option value="2" >example1</option>
+                      <option value="3">example2</option>
+                    </select>
+                  </div>
+                  <div class="col-12 col-sm-6 col-lg-6">
+                    <select class="mdb-select" searchable="Cari..">
+                      <option value="1" disabled selected>Kategori Produk</option>
+                      <option value="2" >UMKM</option>
+                      <option value="3">BUMDES</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="row">
+          {{#repeat 8}}
+          {{>item-product}}
+          {{/repeat}}
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <a href="" class="btn btn-sm btn-primary waves-effect">Lebih Banyak Produk BUMDES</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

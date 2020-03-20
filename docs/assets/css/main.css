@@ -34092,30 +34092,128 @@ table.table a.btn.btn-black {
 }
 
 /* line 11, src/assets/scss/free/_cards.scss */
+.card.card-fullscreen {
+  display: block;
+  z-index: 9999;
+  position: fixed;
+  width: 100% !important;
+  height: 100% !important;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow: auto;
+}
+
+/* line 24, src/assets/scss/free/_cards.scss */
+.card .card-header .heading-elements,
+.card .card-header .heading-elements-toggle {
+  background-color: inherit;
+  position: absolute;
+  top: 17px;
+  right: 21px;
+  cursor: pointer;
+}
+
+/* line 33, src/assets/scss/free/_cards.scss */
+.card .card-header .heading-elements.heading-top-elements .page-item,
+.card .card-header .heading-elements-toggle.heading-top-elements .page-item {
+  display: inline-block;
+}
+
+/* line 38, src/assets/scss/free/_cards.scss */
+.card .card-header .heading-elements a,
+.card .card-header .heading-elements-toggle a {
+  padding: 0;
+  padding-left: 8px;
+}
+
+/* line 41, src/assets/scss/free/_cards.scss */
+.card .card-header .heading-elements a.btn,
+.card .card-header .heading-elements-toggle a.btn {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+/* line 46, src/assets/scss/free/_cards.scss */
+.card .card-header .heading-elements a[data-action="collapse"] i,
+.card .card-header .heading-elements-toggle a[data-action="collapse"] i {
+  -webkit-transition: all .25s ease-out;
+  transition: all .25s ease-out;
+  display: inline-block;
+}
+
+/* line 51, src/assets/scss/free/_cards.scss */
+.card .card-header .heading-elements a[data-action="collapse"].rotate i,
+.card .card-header .heading-elements-toggle a[data-action="collapse"].rotate i {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+@media (max-width: 991.98px) {
+  /* line 59, src/assets/scss/free/_cards.scss */
+  .card .card-header .heading-elements {
+    text-align: center;
+  }
+  /* line 61, src/assets/scss/free/_cards.scss */
+  .card .card-header .heading-elements .list-inline {
+    display: none;
+  }
+  /* line 64, src/assets/scss/free/_cards.scss */
+  .card .card-header .heading-elements.visible {
+    top: 22px !important;
+    display: block;
+    margin-top: 0;
+    top: 100%;
+    top: 50px;
+    height: auto;
+    left: 0px;
+    z-index: 997;
+    position: absolute;
+    width: 100%;
+  }
+  /* line 76, src/assets/scss/free/_cards.scss */
+  .card .card-header .heading-elements.visible .list-inline {
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    top: 12px;
+    right: 15px;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 87, src/assets/scss/free/_cards.scss */
+  .card .card-header .heading-elements-toggle {
+    display: none;
+  }
+}
+
+/* line 93, src/assets/scss/free/_cards.scss */
 .card .card-body h1, .card .card-body h2, .card .card-body h3, .card .card-body h4, .card .card-body h5, .card .card-body h6 {
   font-weight: 400;
 }
 
-/* line 15, src/assets/scss/free/_cards.scss */
+/* line 97, src/assets/scss/free/_cards.scss */
 .card .card-body .card-title a {
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
 
-/* line 17, src/assets/scss/free/_cards.scss */
+/* line 99, src/assets/scss/free/_cards.scss */
 .card .card-body .card-title a:hover {
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
 
-/* line 22, src/assets/scss/free/_cards.scss */
+/* line 104, src/assets/scss/free/_cards.scss */
 .card .card-body .card-text {
   font-size: 0.9rem;
   font-weight: 400;
   color: #747373;
 }
 
-/* line 29, src/assets/scss/free/_cards.scss */
+/* line 111, src/assets/scss/free/_cards.scss */
 .card .md-form label {
   font-weight: 300;
 }
@@ -37690,18 +37788,18 @@ ul.stepper li.active a .label, ul.stepper li.completed a .label {
           transform: translateY(8px) rotate(-45deg);
 }
 
-/* line 136, src/assets/scss/_custom-styles.scss */
+/* line 134, src/assets/scss/_custom-styles.scss */
 #main-content-right {
   width: 100%;
   height: 600px;
 }
 
-/* line 140, src/assets/scss/_custom-styles.scss */
+/* line 138, src/assets/scss/_custom-styles.scss */
 #main-content-right .sidebar-item {
   margin-bottom: 20px;
 }
 
-/* line 143, src/assets/scss/_custom-styles.scss */
+/* line 141, src/assets/scss/_custom-styles.scss */
 #main-content-right .sidebar-item .sidebar-title {
   font-weight: bold;
   font-size: large;
@@ -37709,7 +37807,7 @@ ul.stepper li.active a .label, ul.stepper li.completed a .label {
   margin: 10px 0 25px 0;
 }
 
-/* line 150, src/assets/scss/_custom-styles.scss */
+/* line 148, src/assets/scss/_custom-styles.scss */
 #main-content-right .sidebar-item .sidebar-title::after {
   width: 100%;
   height: 1px;
@@ -37722,23 +37820,24 @@ ul.stepper li.active a .label, ul.stepper li.completed a .label {
   transition: all 300ms linear;
 }
 
-/* line 164, src/assets/scss/_custom-styles.scss */
+/* line 162, src/assets/scss/_custom-styles.scss */
 .main-content-home {
   margin-top: -75px;
 }
 
-/* line 168, src/assets/scss/_custom-styles.scss */
+/* line 166, src/assets/scss/_custom-styles.scss */
 .main-content {
+  min-height: 80vh;
   padding: 10px;
 }
 
-/* line 172, src/assets/scss/_custom-styles.scss */
+/* line 171, src/assets/scss/_custom-styles.scss */
 .greetings {
   width: 100%;
   border-radius: 5px;
 }
 
-/* line 176, src/assets/scss/_custom-styles.scss */
+/* line 175, src/assets/scss/_custom-styles.scss */
 .greetings .greetings-msg {
   margin-top: 40px;
   font-weight: bold;
@@ -37751,7 +37850,7 @@ ul.stepper li.active a .label, ul.stepper li.completed a .label {
 }
 
 @media (max-width: 991.98px) {
-  /* line 176, src/assets/scss/_custom-styles.scss */
+  /* line 175, src/assets/scss/_custom-styles.scss */
   .greetings .greetings-msg {
     padding-right: 10px;
     font-weight: normal;
@@ -37766,13 +37865,13 @@ ul.stepper li.active a .label, ul.stepper li.completed a .label {
   }
 }
 
-/* line 200, src/assets/scss/_custom-styles.scss */
+/* line 199, src/assets/scss/_custom-styles.scss */
 .greetings .card-body {
   padding: 0;
   margin: 0;
 }
 
-/* line 204, src/assets/scss/_custom-styles.scss */
+/* line 203, src/assets/scss/_custom-styles.scss */
 .greetings .card-body .card-title {
   margin: 0;
   margin-top: 5px;
@@ -37780,38 +37879,38 @@ ul.stepper li.active a .label, ul.stepper li.completed a .label {
   font-size: 10px;
 }
 
-/* line 211, src/assets/scss/_custom-styles.scss */
+/* line 210, src/assets/scss/_custom-styles.scss */
 .greetings .card-body .img-lg {
   height: 200px;
   width: 100%;
 }
 
-/* line 216, src/assets/scss/_custom-styles.scss */
+/* line 215, src/assets/scss/_custom-styles.scss */
 .greetings .card-body .card-text {
   margin: 0;
   font-size: 10px;
   padding-bottom: 5px;
 }
 
-/* line 222, src/assets/scss/_custom-styles.scss */
+/* line 221, src/assets/scss/_custom-styles.scss */
 .greetings .card-body .card-img-top {
   max-height: 10px !important;
 }
 
-/* line 231, src/assets/scss/_custom-styles.scss */
+/* line 230, src/assets/scss/_custom-styles.scss */
 .card.card-user .card-img-top {
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-/* line 236, src/assets/scss/_custom-styles.scss */
+/* line 235, src/assets/scss/_custom-styles.scss */
 .card.card-user .card-body {
   padding: 0;
   margin: 0;
 }
 
-/* line 240, src/assets/scss/_custom-styles.scss */
+/* line 239, src/assets/scss/_custom-styles.scss */
 .card.card-user .card-body .card-title {
   margin: 0;
   margin-top: 10px;
@@ -37820,19 +37919,19 @@ ul.stepper li.active a .label, ul.stepper li.completed a .label {
   text-transform: capitalize;
 }
 
-/* line 248, src/assets/scss/_custom-styles.scss */
+/* line 247, src/assets/scss/_custom-styles.scss */
 .card.card-user .card-body .card-text {
   margin: 0;
   font-size: 10px;
   padding-bottom: 10px;
 }
 
-/* line 258, src/assets/scss/_custom-styles.scss */
+/* line 257, src/assets/scss/_custom-styles.scss */
 .j-galery {
   height: 20px;
 }
 
-/* line 262, src/assets/scss/_custom-styles.scss */
+/* line 261, src/assets/scss/_custom-styles.scss */
 .parallax {
   min-height: 280px;
   position: relative;
@@ -37842,12 +37941,12 @@ ul.stepper li.active a .label, ul.stepper li.completed a .label {
   background-size: cover;
 }
 
-/* line 270, src/assets/scss/_custom-styles.scss */
+/* line 269, src/assets/scss/_custom-styles.scss */
 .parallax .title {
   height: 100%;
 }
 
-/* line 274, src/assets/scss/_custom-styles.scss */
+/* line 273, src/assets/scss/_custom-styles.scss */
 .parallax .parallax-content {
   height: 280px;
   position: relative;
@@ -37855,7 +37954,7 @@ ul.stepper li.active a .label, ul.stepper li.completed a .label {
   z-index: 20;
 }
 
-/* line 282, src/assets/scss/_custom-styles.scss */
+/* line 281, src/assets/scss/_custom-styles.scss */
 .img-lg {
   -o-object-fit: cover;
      object-fit: cover;
@@ -37863,24 +37962,24 @@ ul.stepper li.active a .label, ul.stepper li.completed a .label {
   width: 100%;
 }
 
-/* line 288, src/assets/scss/_custom-styles.scss */
+/* line 287, src/assets/scss/_custom-styles.scss */
 .page-head {
   height: 150px;
 }
 
-/* line 291, src/assets/scss/_custom-styles.scss */
+/* line 290, src/assets/scss/_custom-styles.scss */
 .page-head h1 {
   padding: 0;
   margin: 0;
 }
 
-/* line 296, src/assets/scss/_custom-styles.scss */
+/* line 295, src/assets/scss/_custom-styles.scss */
 .page-head .breadcrumb-r {
   background: none;
   margin: 0;
 }
 
-/* line 300, src/assets/scss/_custom-styles.scss */
+/* line 299, src/assets/scss/_custom-styles.scss */
 .page-head .breadcrumb-r ol {
   padding: 0;
   margin: 0;
@@ -37893,7 +37992,7 @@ ul.stepper li.active a .label, ul.stepper li.completed a .label {
   width: 100%;
 }
 
-/* line 311, src/assets/scss/_custom-styles.scss */
+/* line 312, src/assets/scss/_custom-styles.scss */
 .services {
   height: 100vh;
   width: 100%;
@@ -37904,7 +38003,7 @@ ul.stepper li.active a .label, ul.stepper li.completed a .label {
   background-size: cover;
 }
 
-/* line 320, src/assets/scss/_custom-styles.scss */
+/* line 321, src/assets/scss/_custom-styles.scss */
 .services header {
   height: 10vh;
   -webkit-box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22) !important;
@@ -37912,25 +38011,25 @@ ul.stepper li.active a .label, ul.stepper li.completed a .label {
   z-index: 100;
 }
 
-/* line 325, src/assets/scss/_custom-styles.scss */
+/* line 326, src/assets/scss/_custom-styles.scss */
 .services header h1 {
   margin: 0;
   margin: 24px 0 24px 0;
 }
 
 @media (max-width: 768px) {
-  /* line 320, src/assets/scss/_custom-styles.scss */
+  /* line 321, src/assets/scss/_custom-styles.scss */
   .services header {
     height: 5vh;
   }
-  /* line 331, src/assets/scss/_custom-styles.scss */
+  /* line 334, src/assets/scss/_custom-styles.scss */
   .services header h1 {
     margin: 0;
     margin: 10px 0 10px 0;
   }
 }
 
-/* line 339, src/assets/scss/_custom-styles.scss */
+/* line 342, src/assets/scss/_custom-styles.scss */
 .services .services_main {
   padding: 10px 0 100px 0;
   height: 80vh;
@@ -37938,25 +38037,25 @@ ul.stepper li.active a .label, ul.stepper li.completed a .label {
   margin: 0;
 }
 
-/* line 346, src/assets/scss/_custom-styles.scss */
+/* line 349, src/assets/scss/_custom-styles.scss */
 .services footer {
   height: 5vh;
   background: transparent !important;
 }
 
-/* line 350, src/assets/scss/_custom-styles.scss */
+/* line 353, src/assets/scss/_custom-styles.scss */
 .services footer.page-footer {
   padding: 0;
   background: transparent !important;
   bottom: 0;
 }
 
-/* line 355, src/assets/scss/_custom-styles.scss */
+/* line 358, src/assets/scss/_custom-styles.scss */
 .services footer.page-footer .container-fluid, .services footer.page-footer .container-sm, .services footer.page-footer .container-md, .services footer.page-footer .container-lg, .services footer.page-footer .container-xl {
   width: auto;
 }
 
-/* line 359, src/assets/scss/_custom-styles.scss */
+/* line 362, src/assets/scss/_custom-styles.scss */
 .services footer.page-footer .footer-copyright {
   padding: 0;
   overflow: hidden;
@@ -37964,27 +38063,27 @@ ul.stepper li.active a .label, ul.stepper li.completed a .label {
 }
 
 @media (max-width: 768px) {
-  /* line 359, src/assets/scss/_custom-styles.scss */
+  /* line 362, src/assets/scss/_custom-styles.scss */
   .services footer.page-footer .footer-copyright {
     font-size: small;
   }
 }
 
-/* line 366, src/assets/scss/_custom-styles.scss */
+/* line 371, src/assets/scss/_custom-styles.scss */
 .services footer.page-footer .footer-copyright span {
   padding: 0;
   margin: 0;
   font-size: 12px;
 }
 
-/* line 371, src/assets/scss/_custom-styles.scss */
+/* line 376, src/assets/scss/_custom-styles.scss */
 .services footer.page-footer .footer-copyright span .fa {
   animation: loves .35s infinite alternate;
   -webkit-animation: loves .35s infinite alternate;
   color: #E90606;
 }
 
-/* line 384, src/assets/scss/_custom-styles.scss */
+/* line 390, src/assets/scss/_custom-styles.scss */
 .blog .blog-content h2 {
   font-size: larger;
   font-weight: bold;
@@ -37992,19 +38091,19 @@ ul.stepper li.active a .label, ul.stepper li.completed a .label {
 }
 
 @media (max-width: 768px) {
-  /* line 384, src/assets/scss/_custom-styles.scss */
+  /* line 390, src/assets/scss/_custom-styles.scss */
   .blog .blog-content h2 {
     padding-top: 20px;
   }
 }
 
-/* line 393, src/assets/scss/_custom-styles.scss */
+/* line 401, src/assets/scss/_custom-styles.scss */
 .blog .blog-content .list-group .list-group-item {
   padding: 5px;
   font-size: small;
 }
 
-/* line 398, src/assets/scss/_custom-styles.scss */
+/* line 407, src/assets/scss/_custom-styles.scss */
 .blog .blog-content .article {
   margin-bottom: 10px;
   margin-top: 10px;
@@ -38016,10 +38115,107 @@ ul.stepper li.active a .label, ul.stepper li.completed a .label {
   -webkit-box-orient: vertical;
 }
 
-/* line 411, src/assets/scss/_custom-styles.scss */
+/* line 421, src/assets/scss/_custom-styles.scss */
 .avatar-small {
   width: 31px;
   height: 31px;
+}
+
+/* line 427, src/assets/scss/_custom-styles.scss */
+.fixed-sn main {
+  margin-right: 1%;
+  margin-left: 1%;
+  padding-top: 4.5rem !important;
+}
+
+/* line 434, src/assets/scss/_custom-styles.scss */
+.bg-gray {
+  background-color: #f8faff;
+}
+
+/* line 438, src/assets/scss/_custom-styles.scss */
+.siapm-skin section {
+  padding: 50px 0 50px 0;
+}
+
+/* line 442, src/assets/scss/_custom-styles.scss */
+.wellcome {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+/* line 450, src/assets/scss/_custom-styles.scss */
+.wellcome .wellcome_c {
+  min-height: 100vh;
+}
+
+/* line 453, src/assets/scss/_custom-styles.scss */
+.wellcome .wellcome_c .wellcome_c_m {
+  padding-top: 150px;
+}
+
+@media (max-width: 992px) {
+  /* line 453, src/assets/scss/_custom-styles.scss */
+  .wellcome .wellcome_c .wellcome_c_m {
+    text-align: center;
+  }
+}
+
+/* line 460, src/assets/scss/_custom-styles.scss */
+.wellcome .wellcome_c .wellcome_c_b {
+  bottom: 20px;
+}
+
+/* line 467, src/assets/scss/_custom-styles.scss */
+.card-count p {
+  margin: 0;
+}
+
+/* line 470, src/assets/scss/_custom-styles.scss */
+.card-count .count-p {
+  font-size: small;
+  width: 100%;
+}
+
+/* line 473, src/assets/scss/_custom-styles.scss */
+.card-count .count-p .count {
+  font-weight: 500;
+  display: block;
+  font-size: large;
+}
+
+@media (min-width: 992px) {
+  /* line 480, src/assets/scss/_custom-styles.scss */
+  .card-count i {
+    float: right !important;
+  }
+}
+
+@media (max-width: 992px) {
+  /* line 466, src/assets/scss/_custom-styles.scss */
+  .card-count {
+    text-align: center;
+  }
+}
+
+/* line 490, src/assets/scss/_custom-styles.scss */
+.vh-30 {
+  min-height: 30vh;
+  max-height: 50vh;
+}
+
+/* line 494, src/assets/scss/_custom-styles.scss */
+.vh-50 {
+  min-height: 50vh;
+}
+
+/* line 497, src/assets/scss/_custom-styles.scss */
+.vh-10 {
+  height: 10vh;
 }
 
 /* line 3, src/assets/scss/pro/_buttons.scss */
@@ -40954,14 +41150,14 @@ table.table a.btn.btn-whatsapp {
   font-size: 1.5rem;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1200px) {
   /* line 47, src/assets/scss/pro/_navbars.scss */
   .double-nav .button-collapse {
     display: none;
   }
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1200px) {
   /* line 47, src/assets/scss/pro/_navbars.scss */
   .double-nav .button-collapse {
     position: relative;
@@ -41046,7 +41242,7 @@ table.table a.btn.btn-whatsapp {
   }
 }
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1200px) {
   /* line 78, src/assets/scss/pro/_scrollspy.scss */
   .col-md-4 .sticky {
     width: 21.875rem;
@@ -44276,7 +44472,7 @@ button.mdb-autocomplete-clear svg {
   left: auto;
 }
 
-@media only screen and (max-width: 1440px) {
+@media only screen and (max-width: 1200px) {
   /* line 249, src/assets/scss/pro/_sidenav.scss */
   .side-nav.fixed {
     -webkit-transform: translateX(-105%);
@@ -46792,755 +46988,755 @@ button.md-toast-close-button {
 }
 
 /* line 5, src/assets/scss/pro/_skins.scss */
-.dome-skin a {
-  color: #fff;
+.siapm-skin a {
+  color: #bd5d70;
 }
 
 /* line 8, src/assets/scss/pro/_skins.scss */
-.dome-skin .mask.rgba-gradient {
-  background: linear-gradient(45deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.8));
+.siapm-skin .mask.rgba-gradient {
+  background: linear-gradient(45deg, rgba(129, 43, 90, 0.7), rgba(242, 140, 192, 0.8));
 }
 
 /* line 11, src/assets/scss/pro/_skins.scss */
-.dome-skin .rgba-skin,
-.dome-skin .rgba-skin:after {
-  background-color: rgba(255, 255, 255, 0.7);
+.siapm-skin .rgba-skin,
+.siapm-skin .rgba-skin:after {
+  background-color: rgba(129, 43, 90, 0.7);
 }
 
 /* line 14, src/assets/scss/pro/_skins.scss */
-.dome-skin .gradient {
-  background: #fff;
-  background: linear-gradient(135deg, #fff 0%, #fff 100%);
+.siapm-skin .gradient {
+  background: #812b5a;
+  background: linear-gradient(135deg, #812b5a 0%, #f28cc0 100%);
 }
 
 /* line 18, src/assets/scss/pro/_skins.scss */
-.dome-skin .text-skin {
+.siapm-skin .text-skin {
   color: #fff;
 }
 
 /* line 21, src/assets/scss/pro/_skins.scss */
-.dome-skin .text-skin-accent {
-  color: #f2f2f2 !important;
+.siapm-skin .text-skin-accent {
+  color: #9192a2 !important;
 }
 
 /* line 24, src/assets/scss/pro/_skins.scss */
-.dome-skin .text-primary {
-  color: #fff !important;
+.siapm-skin .text-primary {
+  color: #bd5d70 !important;
 }
 
 /* line 28, src/assets/scss/pro/_skins.scss */
-.dome-skin .primary-color, .dome-skin ul.stepper li.active a .circle, ul.stepper li.active a .dome-skin .circle, .dome-skin ul.stepper li.completed a .circle, ul.stepper li.completed a .dome-skin .circle {
-  background-color: #fff !important;
+.siapm-skin .primary-color, .siapm-skin ul.stepper li.active a .circle, ul.stepper li.active a .siapm-skin .circle, .siapm-skin ul.stepper li.completed a .circle, ul.stepper li.completed a .siapm-skin .circle {
+  background-color: #bd5d70 !important;
 }
 
 /* line 32, src/assets/scss/pro/_skins.scss */
-.dome-skin .parallax::before {
+.siapm-skin .parallax::before {
   content: '';
   position: absolute;
   width: 100%;
   height: 100%;
   opacity: .78;
-  background-image: linear-gradient(127deg, #fff 0%, #fff 100%);
+  background-image: linear-gradient(127deg, #812b5a 0%, #f28cc0 100%);
 }
 
 /* line 42, src/assets/scss/pro/_skins.scss */
-.dome-skin.services::before {
+.siapm-skin.services::before {
   content: '';
   position: absolute;
   width: 100%;
   height: 100%;
   opacity: .78;
-  background-image: linear-gradient(127deg, #fff 0%, #fff 100%);
+  background-image: linear-gradient(127deg, #812b5a 0%, #f28cc0 100%);
 }
 
 /* line 50, src/assets/scss/pro/_skins.scss */
-.dome-skin.services header {
-  background: rgba(255, 255, 255, 0.5);
+.siapm-skin.services header {
+  background: rgba(129, 43, 90, 0.5);
 }
 
 /* line 55, src/assets/scss/pro/_skins.scss */
-.dome-skin .navbar {
+.siapm-skin .navbar {
   color: #fff;
-  background-color: #fff;
+  background-color: #535466;
 }
 
 /* line 59, src/assets/scss/pro/_skins.scss */
-.dome-skin .navbar .navbar-brand {
+.siapm-skin .navbar .navbar-brand {
   color: #fff;
 }
 
 /* line 61, src/assets/scss/pro/_skins.scss */
-.dome-skin .navbar .navbar-brand span {
-  color: #f2f2f2;
+.siapm-skin .navbar .navbar-brand span {
+  color: #9192a2;
 }
 
 /* line 69, src/assets/scss/pro/_skins.scss */
-.dome-skin .navbar .navbar-nav .nav-item:hover, .dome-skin .navbar .navbar-nav .nav-item:focus {
+.siapm-skin .navbar .navbar-nav .nav-item:hover, .siapm-skin .navbar .navbar-nav .nav-item:focus {
   color: #fff;
-  background-color: #f2f2f2;
+  background-color: #9192a2;
   border-radius: 10px;
 }
 
 /* line 76, src/assets/scss/pro/_skins.scss */
-.dome-skin .navbar .navbar-nav .nav-item.active .nav-link {
-  color: #f2f2f2;
+.siapm-skin .navbar .navbar-nav .nav-item.active .nav-link {
+  color: #9192a2;
   font-weight: bold;
 }
 
 /* line 80, src/assets/scss/pro/_skins.scss */
-.dome-skin .navbar .navbar-nav .nav-item.active .nav-link:hover, .dome-skin .navbar .navbar-nav .nav-item.active .nav-link:focus {
+.siapm-skin .navbar .navbar-nav .nav-item.active .nav-link:hover, .siapm-skin .navbar .navbar-nav .nav-item.active .nav-link:focus {
   color: #fff;
   border-radius: 10px;
 }
 
 /* line 87, src/assets/scss/pro/_skins.scss */
-.dome-skin .navbar .navbar-nav .nav-item .dropdown-menu a {
+.siapm-skin .navbar .navbar-nav .nav-item .dropdown-menu a {
   color: #000;
 }
 
 /* line 90, src/assets/scss/pro/_skins.scss */
-.dome-skin .navbar .navbar-nav .nav-item .dropdown-menu a:hover, .dome-skin .navbar .navbar-nav .nav-item .dropdown-menu a:focus, .dome-skin .navbar .navbar-nav .nav-item .dropdown-menu a:active {
-  background-color: #f2f2f2;
+.siapm-skin .navbar .navbar-nav .nav-item .dropdown-menu a:hover, .siapm-skin .navbar .navbar-nav .nav-item .dropdown-menu a:focus, .siapm-skin .navbar .navbar-nav .nav-item .dropdown-menu a:active {
+  background-color: #9192a2;
 }
 
 /* line 97, src/assets/scss/pro/_skins.scss */
-.dome-skin .navbar .navbar-nav .nav-item a {
+.siapm-skin .navbar .navbar-nav .nav-item a {
   color: #fff;
 }
 
 /* line 106, src/assets/scss/pro/_skins.scss */
-.dome-skin .navbar .mega-dropdown .dropdown-menu .container {
-  background-color: white !important;
+.siapm-skin .navbar .mega-dropdown .dropdown-menu .container {
+  background-color: #5e6074 !important;
 }
 
 /* line 112, src/assets/scss/pro/_skins.scss */
-.dome-skin .navbar .mega-dropdown .dropdown-menu.mega-menu .sub-menu .sub-title {
-  color: #fff;
+.siapm-skin .navbar .mega-dropdown .dropdown-menu.mega-menu .sub-menu .sub-title {
+  color: #bd5d70;
   border-bottom: 1px solid #fff;
 }
 
 /* line 119, src/assets/scss/pro/_skins.scss */
-.dome-skin .navbar .mega-dropdown .dropdown-menu.mega-menu .sub-menu ul li a {
+.siapm-skin .navbar .mega-dropdown .dropdown-menu.mega-menu .sub-menu ul li a {
   color: #fff;
 }
 
 /* line 122, src/assets/scss/pro/_skins.scss */
-.dome-skin .navbar .mega-dropdown .dropdown-menu.mega-menu .sub-menu ul li a:hover {
+.siapm-skin .navbar .mega-dropdown .dropdown-menu.mega-menu .sub-menu ul li a:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
 /* line 134, src/assets/scss/pro/_skins.scss */
-.dome-skin .navbar.double-nav a {
+.siapm-skin .navbar.double-nav a {
   color: #fff;
 }
 
 /* line 141, src/assets/scss/pro/_skins.scss */
-.dome-skin .navbar form .md-form .form-control {
+.siapm-skin .navbar form .md-form .form-control {
   font-weight: 300;
   color: #fff;
 }
 
 /* line 145, src/assets/scss/pro/_skins.scss */
-.dome-skin .navbar form .md-form .form-control::-webkit-input-placeholder {
+.siapm-skin .navbar form .md-form .form-control::-webkit-input-placeholder {
   color: #fff;
 }
-.dome-skin .navbar form .md-form .form-control::-moz-placeholder {
+.siapm-skin .navbar form .md-form .form-control::-moz-placeholder {
   color: #fff;
 }
-.dome-skin .navbar form .md-form .form-control:-ms-input-placeholder {
+.siapm-skin .navbar form .md-form .form-control:-ms-input-placeholder {
   color: #fff;
 }
-.dome-skin .navbar form .md-form .form-control::-ms-input-placeholder {
+.siapm-skin .navbar form .md-form .form-control::-ms-input-placeholder {
   color: #fff;
 }
-.dome-skin .navbar form .md-form .form-control::placeholder {
+.siapm-skin .navbar form .md-form .form-control::placeholder {
   color: #fff;
 }
 
 /* line 169, src/assets/scss/pro/_skins.scss */
-.dome-skin .welcome-area .wellcome-greetings {
-  background-image: linear-gradient(127deg, #fff 20%, #fff 100%);
+.siapm-skin .welcome-area .wellcome-greetings {
+  background-image: linear-gradient(127deg, #812b5a 20%, #f28cc0 100%);
 }
 
 /* line 173, src/assets/scss/pro/_skins.scss */
-.dome-skin .page-footer {
-  background-color: #fff;
+.siapm-skin .page-footer {
+  background-color: #535466;
 }
 
 /* line 177, src/assets/scss/pro/_skins.scss */
-.dome-skin .side-nav {
-  background-color: #fff;
+.siapm-skin .side-nav {
+  background-color: #aa5077;
 }
 
 /* line 181, src/assets/scss/pro/_skins.scss */
-.dome-skin .side-nav .logo-wrapper > div {
+.siapm-skin .side-nav .logo-wrapper > div {
   background-color: transparent !important;
 }
 
 /* line 186, src/assets/scss/pro/_skins.scss */
-.dome-skin .side-nav .sn-avatar-wrapper img {
-  border: 3px solid #d9d9d9;
+.siapm-skin .side-nav .sn-avatar-wrapper img {
+  border: 3px solid #76778b;
 }
 
 /* line 190, src/assets/scss/pro/_skins.scss */
-.dome-skin .side-nav .social {
+.siapm-skin .side-nav .social {
   border-bottom: 1px solid rgba(153, 153, 153, 0.3);
 }
 
 /* line 205, src/assets/scss/pro/_skins.scss */
-.dome-skin .side-nav .social a:hover .fas,
-.dome-skin .side-nav .social a:hover .fab,
-.dome-skin .side-nav .social a:hover .far {
-  color: #fff !important;
+.siapm-skin .side-nav .social a:hover .fas,
+.siapm-skin .side-nav .social a:hover .fab,
+.siapm-skin .side-nav .social a:hover .far {
+  color: #9fa0ae !important;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
 
 /* line 226, src/assets/scss/pro/_skins.scss */
-.dome-skin .side-nav .collapsible li {
+.siapm-skin .side-nav .collapsible li {
   background-color: transparent;
 }
 
 /* line 235, src/assets/scss/pro/_skins.scss */
-.dome-skin .side-nav .collapsible li .collapsible-header {
+.siapm-skin .side-nav .collapsible li .collapsible-header {
   color: #fff;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
 
 /* line 239, src/assets/scss/pro/_skins.scss */
-.dome-skin .side-nav .collapsible li .collapsible-header.active {
-  background-color: #fff;
+.siapm-skin .side-nav .collapsible li .collapsible-header.active {
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 /* line 250, src/assets/scss/pro/_skins.scss */
-.dome-skin .side-nav .collapsible li .collapsible-header:hover {
-  background-color: #fff;
+.siapm-skin .side-nav .collapsible li .collapsible-header:hover {
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 /* line 255, src/assets/scss/pro/_skins.scss */
-.dome-skin .side-nav .collapsible li .collapsible-body a {
+.siapm-skin .side-nav .collapsible li .collapsible-body a {
   color: #fff;
 }
 
 /* line 258, src/assets/scss/pro/_skins.scss */
-.dome-skin .side-nav .collapsible li .collapsible-body a:hover, .dome-skin .side-nav .collapsible li .collapsible-body a.active, .dome-skin .side-nav .collapsible li .collapsible-body a:active {
-  color: #fff;
+.siapm-skin .side-nav .collapsible li .collapsible-body a:hover, .siapm-skin .side-nav .collapsible li .collapsible-body a.active, .siapm-skin .side-nav .collapsible li .collapsible-body a:active {
+  color: #ffb0e6;
 }
 
 /* line 264, src/assets/scss/pro/_skins.scss */
-.dome-skin .side-nav .collapsible li .collapsible-body a .fas,
-.dome-skin .side-nav .collapsible li .collapsible-body a .fab,
-.dome-skin .side-nav .collapsible li .collapsible-body a .far {
+.siapm-skin .side-nav .collapsible li .collapsible-body a .fas,
+.siapm-skin .side-nav .collapsible li .collapsible-body a .fab,
+.siapm-skin .side-nav .collapsible li .collapsible-body a .far {
   color: #fff;
 }
 
 /* line 272, src/assets/scss/pro/_skins.scss */
-.dome-skin .side-nav .collapsible li a:not(.collapsible-header) {
+.siapm-skin .side-nav .collapsible li a:not(.collapsible-header) {
   color: #fff;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
 
 /* line 276, src/assets/scss/pro/_skins.scss */
-.dome-skin .side-nav .collapsible li a:not(.collapsible-header):hover, .dome-skin .side-nav .collapsible li a:not(.collapsible-header).active, .dome-skin .side-nav .collapsible li a:not(.collapsible-header):active {
-  color: #fff !important;
+.siapm-skin .side-nav .collapsible li a:not(.collapsible-header):hover, .siapm-skin .side-nav .collapsible li a:not(.collapsible-header).active, .siapm-skin .side-nav .collapsible li a:not(.collapsible-header):active {
+  color: #ffb0e6 !important;
 }
 
 /* line 287, src/assets/scss/pro/_skins.scss */
-.dome-skin .side-nav .sidenav-bg:after, .dome-skin .side-nav .sidenav-bg.mask-strong:after {
-  background: #fff;
+.siapm-skin .side-nav .sidenav-bg:after, .siapm-skin .side-nav .sidenav-bg.mask-strong:after {
+  background: rgba(152, 47, 88, 0.8);
 }
 
 /* line 292, src/assets/scss/pro/_skins.scss */
-.dome-skin .side-nav .sidenav-bg.mask-light:after {
-  background: #fff;
+.siapm-skin .side-nav .sidenav-bg.mask-light:after {
+  background: rgba(152, 47, 88, 0.65);
 }
 
 /* line 296, src/assets/scss/pro/_skins.scss */
-.dome-skin .side-nav .sidenav-bg.mask-slight:after {
-  background: #fff;
+.siapm-skin .side-nav .sidenav-bg.mask-slight:after {
+  background: rgba(152, 47, 88, 0.5);
 }
 
 /* line 299, src/assets/scss/core/_mixins.scss */
-.dome-skin .btn-primary {
-  color: #000;
-  background-color: #fff !important;
+.siapm-skin .btn-primary {
+  color: #fff;
+  background-color: #601f39 !important;
 }
 
 /* line 303, src/assets/scss/core/_mixins.scss */
-.dome-skin .btn-primary:hover {
-  color: #000;
-  background-color: white;
+.siapm-skin .btn-primary:hover {
+  color: #fff;
+  background-color: #732544;
 }
 
 /* line 308, src/assets/scss/core/_mixins.scss */
-.dome-skin .btn-primary:focus, .dome-skin .btn-primary.focus {
+.siapm-skin .btn-primary:focus, .siapm-skin .btn-primary.focus {
   -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
 /* line 313, src/assets/scss/core/_mixins.scss */
-.dome-skin .btn-primary:focus, .dome-skin .btn-primary:active, .dome-skin .btn-primary.active {
-  background-color: #cccccc;
+.siapm-skin .btn-primary:focus, .siapm-skin .btn-primary:active, .siapm-skin .btn-primary.active {
+  background-color: #13060b;
 }
 
 /* line 319, src/assets/scss/core/_mixins.scss */
-.dome-skin .btn-primary.dropdown-toggle {
-  background-color: #fff !important;
+.siapm-skin .btn-primary.dropdown-toggle {
+  background-color: #601f39 !important;
 }
 
 /* line 322, src/assets/scss/core/_mixins.scss */
-.dome-skin .btn-primary.dropdown-toggle:hover, .dome-skin .btn-primary.dropdown-toggle:focus {
-  background-color: white !important;
+.siapm-skin .btn-primary.dropdown-toggle:hover, .siapm-skin .btn-primary.dropdown-toggle:focus {
+  background-color: #732544 !important;
 }
 
 /* line 328, src/assets/scss/core/_mixins.scss */
-.dome-skin .btn-primary:not([disabled]):not(.disabled):active, .dome-skin .btn-primary:not([disabled]):not(.disabled).active,
-.show > .dome-skin .btn-primary.dropdown-toggle {
-  background-color: #cccccc !important;
+.siapm-skin .btn-primary:not([disabled]):not(.disabled):active, .siapm-skin .btn-primary:not([disabled]):not(.disabled).active,
+.show > .siapm-skin .btn-primary.dropdown-toggle {
+  background-color: #13060b !important;
   -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
 /* line 335, src/assets/scss/core/_mixins.scss */
-.dome-skin .btn-primary:not([disabled]):not(.disabled):active:focus, .dome-skin .btn-primary:not([disabled]):not(.disabled).active:focus,
-.show > .dome-skin .btn-primary.dropdown-toggle:focus {
+.siapm-skin .btn-primary:not([disabled]):not(.disabled):active:focus, .siapm-skin .btn-primary:not([disabled]):not(.disabled).active:focus,
+.show > .siapm-skin .btn-primary.dropdown-toggle:focus {
   -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
 /* line 342, src/assets/scss/core/_mixins.scss */
-.dome-skin .primary-ic {
-  color: #fff !important;
+.siapm-skin .primary-ic {
+  color: #601f39 !important;
 }
 
 /* line 345, src/assets/scss/core/_mixins.scss */
-.dome-skin .primary-ic:hover, .dome-skin .primary-ic:focus {
-  color: #fff;
+.siapm-skin .primary-ic:hover, .siapm-skin .primary-ic:focus {
+  color: #601f39;
 }
 
 /* line 351, src/assets/scss/core/_mixins.scss */
-.dome-skin a.btn:not([href]):not([tabindex]),
-.dome-skin a.btn:not([href]):not([tabindex]):focus,
-.dome-skin a.btn:not([href]):not([tabindex]):hover {
-  color: #000;
+.siapm-skin a.btn:not([href]):not([tabindex]),
+.siapm-skin a.btn:not([href]):not([tabindex]):focus,
+.siapm-skin a.btn:not([href]):not([tabindex]):hover {
+  color: #fff;
 }
 
 /* line 360, src/assets/scss/core/_mixins.scss */
-.dome-skin table.table a.btn.btn-primary {
-  color: #000;
+.siapm-skin table.table a.btn.btn-primary {
+  color: #fff;
 }
 
 /* line 299, src/assets/scss/core/_mixins.scss */
-.dome-skin .btn-secondary {
-  color: #000;
-  background-color: #fff !important;
+.siapm-skin .btn-secondary {
+  color: #fff;
+  background-color: #e7649d !important;
 }
 
 /* line 303, src/assets/scss/core/_mixins.scss */
-.dome-skin .btn-secondary:hover {
-  color: #000;
-  background-color: white;
+.siapm-skin .btn-secondary:hover {
+  color: #fff;
+  background-color: #ea7aab;
 }
 
 /* line 308, src/assets/scss/core/_mixins.scss */
-.dome-skin .btn-secondary:focus, .dome-skin .btn-secondary.focus {
+.siapm-skin .btn-secondary:focus, .siapm-skin .btn-secondary.focus {
   -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
 /* line 313, src/assets/scss/core/_mixins.scss */
-.dome-skin .btn-secondary:focus, .dome-skin .btn-secondary:active, .dome-skin .btn-secondary.active {
-  background-color: #cccccc;
+.siapm-skin .btn-secondary:focus, .siapm-skin .btn-secondary:active, .siapm-skin .btn-secondary.active {
+  background-color: #c61f68;
 }
 
 /* line 319, src/assets/scss/core/_mixins.scss */
-.dome-skin .btn-secondary.dropdown-toggle {
-  background-color: #fff !important;
+.siapm-skin .btn-secondary.dropdown-toggle {
+  background-color: #e7649d !important;
 }
 
 /* line 322, src/assets/scss/core/_mixins.scss */
-.dome-skin .btn-secondary.dropdown-toggle:hover, .dome-skin .btn-secondary.dropdown-toggle:focus {
-  background-color: white !important;
+.siapm-skin .btn-secondary.dropdown-toggle:hover, .siapm-skin .btn-secondary.dropdown-toggle:focus {
+  background-color: #ea7aab !important;
 }
 
 /* line 328, src/assets/scss/core/_mixins.scss */
-.dome-skin .btn-secondary:not([disabled]):not(.disabled):active, .dome-skin .btn-secondary:not([disabled]):not(.disabled).active,
-.show > .dome-skin .btn-secondary.dropdown-toggle {
-  background-color: #cccccc !important;
+.siapm-skin .btn-secondary:not([disabled]):not(.disabled):active, .siapm-skin .btn-secondary:not([disabled]):not(.disabled).active,
+.show > .siapm-skin .btn-secondary.dropdown-toggle {
+  background-color: #c61f68 !important;
   -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
 /* line 335, src/assets/scss/core/_mixins.scss */
-.dome-skin .btn-secondary:not([disabled]):not(.disabled):active:focus, .dome-skin .btn-secondary:not([disabled]):not(.disabled).active:focus,
-.show > .dome-skin .btn-secondary.dropdown-toggle:focus {
+.siapm-skin .btn-secondary:not([disabled]):not(.disabled):active:focus, .siapm-skin .btn-secondary:not([disabled]):not(.disabled).active:focus,
+.show > .siapm-skin .btn-secondary.dropdown-toggle:focus {
   -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
 /* line 342, src/assets/scss/core/_mixins.scss */
-.dome-skin .secondary-ic {
-  color: #fff !important;
+.siapm-skin .secondary-ic {
+  color: #e7649d !important;
 }
 
 /* line 345, src/assets/scss/core/_mixins.scss */
-.dome-skin .secondary-ic:hover, .dome-skin .secondary-ic:focus {
-  color: #fff;
+.siapm-skin .secondary-ic:hover, .siapm-skin .secondary-ic:focus {
+  color: #e7649d;
 }
 
 /* line 351, src/assets/scss/core/_mixins.scss */
-.dome-skin a.btn:not([href]):not([tabindex]),
-.dome-skin a.btn:not([href]):not([tabindex]):focus,
-.dome-skin a.btn:not([href]):not([tabindex]):hover {
-  color: #000;
+.siapm-skin a.btn:not([href]):not([tabindex]),
+.siapm-skin a.btn:not([href]):not([tabindex]):focus,
+.siapm-skin a.btn:not([href]):not([tabindex]):hover {
+  color: #fff;
 }
 
 /* line 360, src/assets/scss/core/_mixins.scss */
-.dome-skin table.table a.btn.btn-secondary {
-  color: #000;
+.siapm-skin table.table a.btn.btn-secondary {
+  color: #fff;
 }
 
 /* line 299, src/assets/scss/core/_mixins.scss */
-.dome-skin .btn-default {
-  color: #000;
-  background-color: #fff !important;
+.siapm-skin .btn-default {
+  color: #fff;
+  background-color: #535466 !important;
 }
 
 /* line 303, src/assets/scss/core/_mixins.scss */
-.dome-skin .btn-default:hover {
-  color: #000;
-  background-color: white;
+.siapm-skin .btn-default:hover {
+  color: #fff;
+  background-color: #5e6074;
 }
 
 /* line 308, src/assets/scss/core/_mixins.scss */
-.dome-skin .btn-default:focus, .dome-skin .btn-default.focus {
+.siapm-skin .btn-default:focus, .siapm-skin .btn-default.focus {
   -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
 /* line 313, src/assets/scss/core/_mixins.scss */
-.dome-skin .btn-default:focus, .dome-skin .btn-default:active, .dome-skin .btn-default.active {
-  background-color: #cccccc;
+.siapm-skin .btn-default:focus, .siapm-skin .btn-default:active, .siapm-skin .btn-default.active {
+  background-color: #25262e;
 }
 
 /* line 319, src/assets/scss/core/_mixins.scss */
-.dome-skin .btn-default.dropdown-toggle {
-  background-color: #fff !important;
+.siapm-skin .btn-default.dropdown-toggle {
+  background-color: #535466 !important;
 }
 
 /* line 322, src/assets/scss/core/_mixins.scss */
-.dome-skin .btn-default.dropdown-toggle:hover, .dome-skin .btn-default.dropdown-toggle:focus {
-  background-color: white !important;
+.siapm-skin .btn-default.dropdown-toggle:hover, .siapm-skin .btn-default.dropdown-toggle:focus {
+  background-color: #5e6074 !important;
 }
 
 /* line 328, src/assets/scss/core/_mixins.scss */
-.dome-skin .btn-default:not([disabled]):not(.disabled):active, .dome-skin .btn-default:not([disabled]):not(.disabled).active,
-.show > .dome-skin .btn-default.dropdown-toggle {
-  background-color: #cccccc !important;
+.siapm-skin .btn-default:not([disabled]):not(.disabled):active, .siapm-skin .btn-default:not([disabled]):not(.disabled).active,
+.show > .siapm-skin .btn-default.dropdown-toggle {
+  background-color: #25262e !important;
   -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
 /* line 335, src/assets/scss/core/_mixins.scss */
-.dome-skin .btn-default:not([disabled]):not(.disabled):active:focus, .dome-skin .btn-default:not([disabled]):not(.disabled).active:focus,
-.show > .dome-skin .btn-default.dropdown-toggle:focus {
+.siapm-skin .btn-default:not([disabled]):not(.disabled):active:focus, .siapm-skin .btn-default:not([disabled]):not(.disabled).active:focus,
+.show > .siapm-skin .btn-default.dropdown-toggle:focus {
   -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
 /* line 342, src/assets/scss/core/_mixins.scss */
-.dome-skin .default-ic {
-  color: #fff !important;
+.siapm-skin .default-ic {
+  color: #535466 !important;
 }
 
 /* line 345, src/assets/scss/core/_mixins.scss */
-.dome-skin .default-ic:hover, .dome-skin .default-ic:focus {
-  color: #fff;
+.siapm-skin .default-ic:hover, .siapm-skin .default-ic:focus {
+  color: #535466;
 }
 
 /* line 351, src/assets/scss/core/_mixins.scss */
-.dome-skin a.btn:not([href]):not([tabindex]),
-.dome-skin a.btn:not([href]):not([tabindex]):focus,
-.dome-skin a.btn:not([href]):not([tabindex]):hover {
-  color: #000;
+.siapm-skin a.btn:not([href]):not([tabindex]),
+.siapm-skin a.btn:not([href]):not([tabindex]):focus,
+.siapm-skin a.btn:not([href]):not([tabindex]):hover {
+  color: #fff;
 }
 
 /* line 360, src/assets/scss/core/_mixins.scss */
-.dome-skin table.table a.btn.btn-default {
-  color: #000;
+.siapm-skin table.table a.btn.btn-default {
+  color: #fff;
 }
 
 /* line 371, src/assets/scss/core/_mixins.scss */
-.dome-skin .btn-outline-primary {
-  color: #fff !important;
+.siapm-skin .btn-outline-primary {
+  color: #601f39 !important;
   background-color: transparent !important;
-  border: 2px solid #fff !important;
+  border: 2px solid #601f39 !important;
 }
 
 /* line 376, src/assets/scss/core/_mixins.scss */
-.dome-skin .btn-outline-primary:hover, .dome-skin .btn-outline-primary:focus, .dome-skin .btn-outline-primary:active, .dome-skin .btn-outline-primary:active:focus, .dome-skin .btn-outline-primary.active {
-  color: #fff !important;
+.siapm-skin .btn-outline-primary:hover, .siapm-skin .btn-outline-primary:focus, .siapm-skin .btn-outline-primary:active, .siapm-skin .btn-outline-primary:active:focus, .siapm-skin .btn-outline-primary.active {
+  color: #601f39 !important;
   background-color: transparent !important;
-  border-color: #fff !important;
+  border-color: #601f39 !important;
 }
 
 /* line 386, src/assets/scss/core/_mixins.scss */
-.dome-skin .btn-outline-primary:not([disabled]):not(.disabled):active, .dome-skin .btn-outline-primary:not([disabled]):not(.disabled).active,
-.show > .dome-skin .btn-outline-primary.dropdown-toggle {
+.siapm-skin .btn-outline-primary:not([disabled]):not(.disabled):active, .siapm-skin .btn-outline-primary:not([disabled]):not(.disabled).active,
+.show > .siapm-skin .btn-outline-primary.dropdown-toggle {
   background-color: transparent !important;
-  border-color: #fff !important;
+  border-color: #601f39 !important;
   -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
 /* line 394, src/assets/scss/core/_mixins.scss */
-.dome-skin .btn-outline-primary:not([disabled]):not(.disabled):active:focus, .dome-skin .btn-outline-primary:not([disabled]):not(.disabled).active:focus,
-.show > .dome-skin .btn-outline-primary.dropdown-toggle:focus {
+.siapm-skin .btn-outline-primary:not([disabled]):not(.disabled):active:focus, .siapm-skin .btn-outline-primary:not([disabled]):not(.disabled).active:focus,
+.show > .siapm-skin .btn-outline-primary.dropdown-toggle:focus {
   -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
 /* line 371, src/assets/scss/core/_mixins.scss */
-.dome-skin .btn-outline-secondary {
-  color: #fff !important;
+.siapm-skin .btn-outline-secondary {
+  color: #e7649d !important;
   background-color: transparent !important;
-  border: 2px solid #fff !important;
+  border: 2px solid #e7649d !important;
 }
 
 /* line 376, src/assets/scss/core/_mixins.scss */
-.dome-skin .btn-outline-secondary:hover, .dome-skin .btn-outline-secondary:focus, .dome-skin .btn-outline-secondary:active, .dome-skin .btn-outline-secondary:active:focus, .dome-skin .btn-outline-secondary.active {
-  color: #fff !important;
+.siapm-skin .btn-outline-secondary:hover, .siapm-skin .btn-outline-secondary:focus, .siapm-skin .btn-outline-secondary:active, .siapm-skin .btn-outline-secondary:active:focus, .siapm-skin .btn-outline-secondary.active {
+  color: #e7649d !important;
   background-color: transparent !important;
-  border-color: #fff !important;
+  border-color: #e7649d !important;
 }
 
 /* line 386, src/assets/scss/core/_mixins.scss */
-.dome-skin .btn-outline-secondary:not([disabled]):not(.disabled):active, .dome-skin .btn-outline-secondary:not([disabled]):not(.disabled).active,
-.show > .dome-skin .btn-outline-secondary.dropdown-toggle {
+.siapm-skin .btn-outline-secondary:not([disabled]):not(.disabled):active, .siapm-skin .btn-outline-secondary:not([disabled]):not(.disabled).active,
+.show > .siapm-skin .btn-outline-secondary.dropdown-toggle {
   background-color: transparent !important;
-  border-color: #fff !important;
+  border-color: #e7649d !important;
   -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
 /* line 394, src/assets/scss/core/_mixins.scss */
-.dome-skin .btn-outline-secondary:not([disabled]):not(.disabled):active:focus, .dome-skin .btn-outline-secondary:not([disabled]):not(.disabled).active:focus,
-.show > .dome-skin .btn-outline-secondary.dropdown-toggle:focus {
+.siapm-skin .btn-outline-secondary:not([disabled]):not(.disabled):active:focus, .siapm-skin .btn-outline-secondary:not([disabled]):not(.disabled).active:focus,
+.show > .siapm-skin .btn-outline-secondary.dropdown-toggle:focus {
   -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
 /* line 371, src/assets/scss/core/_mixins.scss */
-.dome-skin .btn-outline-default {
-  color: #fff !important;
+.siapm-skin .btn-outline-default {
+  color: #535466 !important;
   background-color: transparent !important;
-  border: 2px solid #fff !important;
+  border: 2px solid #535466 !important;
 }
 
 /* line 376, src/assets/scss/core/_mixins.scss */
-.dome-skin .btn-outline-default:hover, .dome-skin .btn-outline-default:focus, .dome-skin .btn-outline-default:active, .dome-skin .btn-outline-default:active:focus, .dome-skin .btn-outline-default.active {
-  color: #fff !important;
+.siapm-skin .btn-outline-default:hover, .siapm-skin .btn-outline-default:focus, .siapm-skin .btn-outline-default:active, .siapm-skin .btn-outline-default:active:focus, .siapm-skin .btn-outline-default.active {
+  color: #535466 !important;
   background-color: transparent !important;
-  border-color: #fff !important;
+  border-color: #535466 !important;
 }
 
 /* line 386, src/assets/scss/core/_mixins.scss */
-.dome-skin .btn-outline-default:not([disabled]):not(.disabled):active, .dome-skin .btn-outline-default:not([disabled]):not(.disabled).active,
-.show > .dome-skin .btn-outline-default.dropdown-toggle {
+.siapm-skin .btn-outline-default:not([disabled]):not(.disabled):active, .siapm-skin .btn-outline-default:not([disabled]):not(.disabled).active,
+.show > .siapm-skin .btn-outline-default.dropdown-toggle {
   background-color: transparent !important;
-  border-color: #fff !important;
+  border-color: #535466 !important;
   -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
 /* line 394, src/assets/scss/core/_mixins.scss */
-.dome-skin .btn-outline-default:not([disabled]):not(.disabled):active:focus, .dome-skin .btn-outline-default:not([disabled]):not(.disabled).active:focus,
-.show > .dome-skin .btn-outline-default.dropdown-toggle:focus {
+.siapm-skin .btn-outline-default:not([disabled]):not(.disabled):active:focus, .siapm-skin .btn-outline-default:not([disabled]):not(.disabled).active:focus,
+.show > .siapm-skin .btn-outline-default.dropdown-toggle:focus {
   -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
 /* line 309, src/assets/scss/pro/_skins.scss */
-.dome-skin .card .btn-action {
-  background: #fff;
+.siapm-skin .card .btn-action {
+  background: #535466;
 }
 
 /* line 312, src/assets/scss/pro/_skins.scss */
-.dome-skin .card .btn-action:hover, .dome-skin .card .btn-action:focus {
-  background-color: white !important;
+.siapm-skin .card .btn-action:hover, .siapm-skin .card .btn-action:focus {
+  background-color: #5e6074 !important;
 }
 
 /* line 317, src/assets/scss/pro/_skins.scss */
-.dome-skin .card .btn-action.active {
-  background-color: #cccccc !important;
+.siapm-skin .card .btn-action.active {
+  background-color: #25262e !important;
 }
 
 /* line 337, src/assets/scss/pro/_skins.scss */
-.dome-skin .md-outline input[type="text"]:focus:not([readonly]),
-.dome-skin .md-outline input[type="password"]:focus:not([readonly]),
-.dome-skin .md-outline input[type="email"]:focus:not([readonly]),
-.dome-skin .md-outline input[type="url"]:focus:not([readonly]),
-.dome-skin .md-outline input[type="time"]:focus:not([readonly]),
-.dome-skin .md-outline input[type="date"]:focus:not([readonly]),
-.dome-skin .md-outline input[type="datetime-local"]:focus:not([readonly]),
-.dome-skin .md-outline input[type="tel"]:focus:not([readonly]),
-.dome-skin .md-outline input[type="number"]:focus:not([readonly]),
-.dome-skin .md-outline input[type="search-md"]:focus:not([readonly]),
-.dome-skin .md-outline input[type="search"]:focus:not([readonly]),
-.dome-skin .md-outline textarea:focus:not([readonly]) {
-  border-color: #fff;
-  -webkit-box-shadow: inset 0 0 0 1px #fff;
-          box-shadow: inset 0 0 0 1px #fff;
+.siapm-skin .md-outline input[type="text"]:focus:not([readonly]),
+.siapm-skin .md-outline input[type="password"]:focus:not([readonly]),
+.siapm-skin .md-outline input[type="email"]:focus:not([readonly]),
+.siapm-skin .md-outline input[type="url"]:focus:not([readonly]),
+.siapm-skin .md-outline input[type="time"]:focus:not([readonly]),
+.siapm-skin .md-outline input[type="date"]:focus:not([readonly]),
+.siapm-skin .md-outline input[type="datetime-local"]:focus:not([readonly]),
+.siapm-skin .md-outline input[type="tel"]:focus:not([readonly]),
+.siapm-skin .md-outline input[type="number"]:focus:not([readonly]),
+.siapm-skin .md-outline input[type="search-md"]:focus:not([readonly]),
+.siapm-skin .md-outline input[type="search"]:focus:not([readonly]),
+.siapm-skin .md-outline textarea:focus:not([readonly]) {
+  border-color: #9fa0ae;
+  -webkit-box-shadow: inset 0 0 0 1px #9fa0ae;
+          box-shadow: inset 0 0 0 1px #9fa0ae;
 }
 
 /* line 342, src/assets/scss/pro/_skins.scss */
-.dome-skin .md-outline input[type="text"]:focus:not([readonly]) + label,
-.dome-skin .md-outline input[type="password"]:focus:not([readonly]) + label,
-.dome-skin .md-outline input[type="email"]:focus:not([readonly]) + label,
-.dome-skin .md-outline input[type="url"]:focus:not([readonly]) + label,
-.dome-skin .md-outline input[type="time"]:focus:not([readonly]) + label,
-.dome-skin .md-outline input[type="date"]:focus:not([readonly]) + label,
-.dome-skin .md-outline input[type="datetime-local"]:focus:not([readonly]) + label,
-.dome-skin .md-outline input[type="tel"]:focus:not([readonly]) + label,
-.dome-skin .md-outline input[type="number"]:focus:not([readonly]) + label,
-.dome-skin .md-outline input[type="search-md"]:focus:not([readonly]) + label,
-.dome-skin .md-outline input[type="search"]:focus:not([readonly]) + label,
-.dome-skin .md-outline textarea:focus:not([readonly]) + label {
-  color: #fff;
+.siapm-skin .md-outline input[type="text"]:focus:not([readonly]) + label,
+.siapm-skin .md-outline input[type="password"]:focus:not([readonly]) + label,
+.siapm-skin .md-outline input[type="email"]:focus:not([readonly]) + label,
+.siapm-skin .md-outline input[type="url"]:focus:not([readonly]) + label,
+.siapm-skin .md-outline input[type="time"]:focus:not([readonly]) + label,
+.siapm-skin .md-outline input[type="date"]:focus:not([readonly]) + label,
+.siapm-skin .md-outline input[type="datetime-local"]:focus:not([readonly]) + label,
+.siapm-skin .md-outline input[type="tel"]:focus:not([readonly]) + label,
+.siapm-skin .md-outline input[type="number"]:focus:not([readonly]) + label,
+.siapm-skin .md-outline input[type="search-md"]:focus:not([readonly]) + label,
+.siapm-skin .md-outline input[type="search"]:focus:not([readonly]) + label,
+.siapm-skin .md-outline textarea:focus:not([readonly]) + label {
+  color: #9fa0ae;
 }
 
 /* line 351, src/assets/scss/pro/_skins.scss */
-.dome-skin .md-bg input[type="text"],
-.dome-skin .md-bg input[type="password"],
-.dome-skin .md-bg input[type="email"],
-.dome-skin .md-bg input[type="url"],
-.dome-skin .md-bg input[type="time"],
-.dome-skin .md-bg input[type="date"],
-.dome-skin .md-bg input[type="datetime-local"],
-.dome-skin .md-bg input[type="tel"],
-.dome-skin .md-bg input[type="number"],
-.dome-skin .md-bg input[type="search-md"],
-.dome-skin .md-bg input[type="search"],
-.dome-skin .md-bg textarea.md-textarea {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff)), -webkit-gradient(linear, left top, left bottom, from(#ced4da), to(#ced4da));
-  background-image: linear-gradient(to bottom, #fff, #fff), linear-gradient(to bottom, #ced4da, #ced4da);
+.siapm-skin .md-bg input[type="text"],
+.siapm-skin .md-bg input[type="password"],
+.siapm-skin .md-bg input[type="email"],
+.siapm-skin .md-bg input[type="url"],
+.siapm-skin .md-bg input[type="time"],
+.siapm-skin .md-bg input[type="date"],
+.siapm-skin .md-bg input[type="datetime-local"],
+.siapm-skin .md-bg input[type="tel"],
+.siapm-skin .md-bg input[type="number"],
+.siapm-skin .md-bg input[type="search-md"],
+.siapm-skin .md-bg input[type="search"],
+.siapm-skin .md-bg textarea.md-textarea {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#9fa0ae), to(#9fa0ae)), -webkit-gradient(linear, left top, left bottom, from(#ced4da), to(#ced4da));
+  background-image: linear-gradient(to bottom, #9fa0ae, #9fa0ae), linear-gradient(to bottom, #ced4da, #ced4da);
 }
 
 /* line 368, src/assets/scss/pro/_skins.scss */
-.dome-skin input[type="email"]:focus:not([readonly]),
-.dome-skin input[type="text"]:focus:not([readonly]),
-.dome-skin input[type="password"]:focus:not([readonly]),
-.dome-skin input[type="number"]:focus:not([readonly]),
-.dome-skin textarea.md-textarea:focus:not([readonly]) {
-  border-color: #fff;
-  -webkit-box-shadow: 0 1px 0 0 #fff;
-          box-shadow: 0 1px 0 0 #fff;
+.siapm-skin input[type="email"]:focus:not([readonly]),
+.siapm-skin input[type="text"]:focus:not([readonly]),
+.siapm-skin input[type="password"]:focus:not([readonly]),
+.siapm-skin input[type="number"]:focus:not([readonly]),
+.siapm-skin textarea.md-textarea:focus:not([readonly]) {
+  border-color: #9fa0ae;
+  -webkit-box-shadow: 0 1px 0 0 #9fa0ae;
+          box-shadow: 0 1px 0 0 #9fa0ae;
 }
 
 /* line 376, src/assets/scss/pro/_skins.scss */
-.dome-skin input[type="email"]:focus:not([readonly]) + label,
-.dome-skin input[type="text"]:focus:not([readonly]) + label,
-.dome-skin input[type="password"]:focus:not([readonly]) + label,
-.dome-skin input[type="number"]:focus:not([readonly]) + label,
-.dome-skin textarea.md-textarea:focus:not([readonly]) + label {
-  color: #fff;
+.siapm-skin input[type="email"]:focus:not([readonly]) + label,
+.siapm-skin input[type="text"]:focus:not([readonly]) + label,
+.siapm-skin input[type="password"]:focus:not([readonly]) + label,
+.siapm-skin input[type="number"]:focus:not([readonly]) + label,
+.siapm-skin textarea.md-textarea:focus:not([readonly]) + label {
+  color: #9fa0ae;
 }
 
 /* line 383, src/assets/scss/pro/_skins.scss */
-.dome-skin input[type="checkbox"]:checked + label:before {
-  border-right: 2px solid #fff;
-  border-bottom: 2px solid #fff;
+.siapm-skin input[type="checkbox"]:checked + label:before {
+  border-right: 2px solid #9fa0ae;
+  border-bottom: 2px solid #9fa0ae;
 }
 
 /* line 392, src/assets/scss/pro/_skins.scss */
-.dome-skin input[type="checkbox"].filled-in:checked + label:before {
+.siapm-skin input[type="checkbox"].filled-in:checked + label:before {
   border-right: 2px solid #fff;
   border-bottom: 2px solid #fff;
 }
 
 /* line 397, src/assets/scss/pro/_skins.scss */
-.dome-skin input[type="checkbox"].filled-in:checked + label:after {
-  background-color: #fff;
-  border-color: #fff;
+.siapm-skin input[type="checkbox"].filled-in:checked + label:after {
+  background-color: #9fa0ae;
+  border-color: #9fa0ae;
 }
 
 /* line 406, src/assets/scss/pro/_skins.scss */
-.dome-skin .md-form .prefix.active {
-  color: #fff;
+.siapm-skin .md-form .prefix.active {
+  color: #9fa0ae;
 }
 
 /* line 418, src/assets/scss/pro/_skins.scss */
-.dome-skin .select-wrapper.colorful-select.md-form.md-outline span.caret.active {
-  color: #fff !important;
+.siapm-skin .select-wrapper.colorful-select.md-form.md-outline span.caret.active {
+  color: #9fa0ae !important;
 }
 
 /* line 426, src/assets/scss/pro/_skins.scss */
-.dome-skin .select-wrapper.colorful-select.md-form.md-outline input.select-dropdown:focus {
-  border-color: #fff;
-  -webkit-box-shadow: inset 0 0 0 1px #fff;
-          box-shadow: inset 0 0 0 1px #fff;
+.siapm-skin .select-wrapper.colorful-select.md-form.md-outline input.select-dropdown:focus {
+  border-color: #9fa0ae;
+  -webkit-box-shadow: inset 0 0 0 1px #9fa0ae;
+          box-shadow: inset 0 0 0 1px #9fa0ae;
 }
 
 /* line 434, src/assets/scss/pro/_skins.scss */
-.dome-skin .select-wrapper.colorful-select.md-form.md-outline + label.active {
-  color: #fff;
+.siapm-skin .select-wrapper.colorful-select.md-form.md-outline + label.active {
+  color: #9fa0ae;
 }
 
 /* line 442, src/assets/scss/pro/_skins.scss */
-.dome-skin .select-wrapper.colorful-select.md-form .dropdown-content li.active,
-.dome-skin .select-wrapper.colorful-select.md-form .dropdown-content li a,
-.dome-skin .select-wrapper.colorful-select.md-form .dropdown-content li span:hover {
-  background-color: #fff !important;
+.siapm-skin .select-wrapper.colorful-select.md-form .dropdown-content li.active,
+.siapm-skin .select-wrapper.colorful-select.md-form .dropdown-content li a,
+.siapm-skin .select-wrapper.colorful-select.md-form .dropdown-content li span:hover {
+  background-color: #9fa0ae !important;
 }
 
 /* line 449, src/assets/scss/pro/_skins.scss */
-.dome-skin .select-wrapper.colorful-select.md-form .dropdown-content li.disabled.active {
+.siapm-skin .select-wrapper.colorful-select.md-form .dropdown-content li.disabled.active {
   background-color: transparent !important;
 }
 
 /* line 458, src/assets/scss/pro/_skins.scss */
-.dome-skin .top-nav-collapse {
-  background-color: #fff;
+.siapm-skin .top-nav-collapse {
+  background-color: #535466;
 }
 
 /* line 464, src/assets/scss/pro/_skins.scss */
-.dome-skin .carousel-multi-item .controls-top > a,
-.dome-skin .carousel-multi-item .carousel-indicators li,
-.dome-skin .carousel-multi-item .carousel-indicators li.active {
-  background-color: #fff;
+.siapm-skin .carousel-multi-item .controls-top > a,
+.siapm-skin .carousel-multi-item .carousel-indicators li,
+.siapm-skin .carousel-multi-item .carousel-indicators li.active {
+  background-color: #9fa0ae;
 }
 
 /* line 472, src/assets/scss/pro/_skins.scss */
-.dome-skin .form-header,
-.dome-skin .card-header {
+.siapm-skin .form-header,
+.siapm-skin .card-header {
   text-transform: capitalize;
   color: white;
-  background-color: white;
+  background-color: #a5a5b3;
 }
 
 /* line 479, src/assets/scss/pro/_skins.scss */
-.dome-skin .spinner-primary-color,
-.dome-skin .spinner-primary-color-only {
-  border-color: #fff;
+.siapm-skin .spinner-primary-color,
+.siapm-skin .spinner-primary-color-only {
+  border-color: #bd5d70;
 }
 
 /* line 486, src/assets/scss/pro/_skins.scss */
-.dome-skin .pagination-primary-color .page-item.active .page-link,
-.dome-skin .pagination-primary-color .page-item.active .page-link:focus,
-.dome-skin .pagination-primary-color .page-item.active .page-link:hover {
+.siapm-skin .pagination-primary-color .page-item.active .page-link,
+.siapm-skin .pagination-primary-color .page-item.active .page-link:focus,
+.siapm-skin .pagination-primary-color .page-item.active .page-link:hover {
   color: #fff;
-  background-color: #fff;
+  background-color: #bd5d70;
 }
 
 /* line 493, src/assets/scss/pro/_skins.scss */
-.dome-skin .pagination-primary-color .page-link {
-  color: #fff;
+.siapm-skin .pagination-primary-color .page-link {
+  color: #bd5d70;
 }
 
 /* line 496, src/assets/scss/pro/_skins.scss */
-.dome-skin .pagination-primary-color .page-link:focus {
+.siapm-skin .pagination-primary-color .page-link:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -56342,7 +56538,7 @@ button.md-toast-close-button {
   padding-top: 5.5rem;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1200px) {
   /* line 13, src/assets/scss/pro/sections/_templates.scss */
   .fixed-sn .double-nav,
   .fixed-sn main,
@@ -57062,18 +57258,18 @@ button.md-toast-close-button {
           transform: translateY(8px) rotate(-45deg);
 }
 
-/* line 136, src/assets/scss/_custom-styles.scss */
+/* line 134, src/assets/scss/_custom-styles.scss */
 #main-content-right {
   width: 100%;
   height: 600px;
 }
 
-/* line 140, src/assets/scss/_custom-styles.scss */
+/* line 138, src/assets/scss/_custom-styles.scss */
 #main-content-right .sidebar-item {
   margin-bottom: 20px;
 }
 
-/* line 143, src/assets/scss/_custom-styles.scss */
+/* line 141, src/assets/scss/_custom-styles.scss */
 #main-content-right .sidebar-item .sidebar-title {
   font-weight: bold;
   font-size: large;
@@ -57081,7 +57277,7 @@ button.md-toast-close-button {
   margin: 10px 0 25px 0;
 }
 
-/* line 150, src/assets/scss/_custom-styles.scss */
+/* line 148, src/assets/scss/_custom-styles.scss */
 #main-content-right .sidebar-item .sidebar-title::after {
   width: 100%;
   height: 1px;
@@ -57094,23 +57290,24 @@ button.md-toast-close-button {
   transition: all 300ms linear;
 }
 
-/* line 164, src/assets/scss/_custom-styles.scss */
+/* line 162, src/assets/scss/_custom-styles.scss */
 .main-content-home {
   margin-top: -75px;
 }
 
-/* line 168, src/assets/scss/_custom-styles.scss */
+/* line 166, src/assets/scss/_custom-styles.scss */
 .main-content {
+  min-height: 80vh;
   padding: 10px;
 }
 
-/* line 172, src/assets/scss/_custom-styles.scss */
+/* line 171, src/assets/scss/_custom-styles.scss */
 .greetings {
   width: 100%;
   border-radius: 5px;
 }
 
-/* line 176, src/assets/scss/_custom-styles.scss */
+/* line 175, src/assets/scss/_custom-styles.scss */
 .greetings .greetings-msg {
   margin-top: 40px;
   font-weight: bold;
@@ -57123,7 +57320,7 @@ button.md-toast-close-button {
 }
 
 @media (max-width: 991.98px) {
-  /* line 176, src/assets/scss/_custom-styles.scss */
+  /* line 175, src/assets/scss/_custom-styles.scss */
   .greetings .greetings-msg {
     padding-right: 10px;
     font-weight: normal;
@@ -57138,13 +57335,13 @@ button.md-toast-close-button {
   }
 }
 
-/* line 200, src/assets/scss/_custom-styles.scss */
+/* line 199, src/assets/scss/_custom-styles.scss */
 .greetings .card-body {
   padding: 0;
   margin: 0;
 }
 
-/* line 204, src/assets/scss/_custom-styles.scss */
+/* line 203, src/assets/scss/_custom-styles.scss */
 .greetings .card-body .card-title {
   margin: 0;
   margin-top: 5px;
@@ -57152,38 +57349,38 @@ button.md-toast-close-button {
   font-size: 10px;
 }
 
-/* line 211, src/assets/scss/_custom-styles.scss */
+/* line 210, src/assets/scss/_custom-styles.scss */
 .greetings .card-body .img-lg {
   height: 200px;
   width: 100%;
 }
 
-/* line 216, src/assets/scss/_custom-styles.scss */
+/* line 215, src/assets/scss/_custom-styles.scss */
 .greetings .card-body .card-text {
   margin: 0;
   font-size: 10px;
   padding-bottom: 5px;
 }
 
-/* line 222, src/assets/scss/_custom-styles.scss */
+/* line 221, src/assets/scss/_custom-styles.scss */
 .greetings .card-body .card-img-top {
   max-height: 10px !important;
 }
 
-/* line 231, src/assets/scss/_custom-styles.scss */
+/* line 230, src/assets/scss/_custom-styles.scss */
 .card.card-user .card-img-top {
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-/* line 236, src/assets/scss/_custom-styles.scss */
+/* line 235, src/assets/scss/_custom-styles.scss */
 .card.card-user .card-body {
   padding: 0;
   margin: 0;
 }
 
-/* line 240, src/assets/scss/_custom-styles.scss */
+/* line 239, src/assets/scss/_custom-styles.scss */
 .card.card-user .card-body .card-title {
   margin: 0;
   margin-top: 10px;
@@ -57192,19 +57389,19 @@ button.md-toast-close-button {
   text-transform: capitalize;
 }
 
-/* line 248, src/assets/scss/_custom-styles.scss */
+/* line 247, src/assets/scss/_custom-styles.scss */
 .card.card-user .card-body .card-text {
   margin: 0;
   font-size: 10px;
   padding-bottom: 10px;
 }
 
-/* line 258, src/assets/scss/_custom-styles.scss */
+/* line 257, src/assets/scss/_custom-styles.scss */
 .j-galery {
   height: 20px;
 }
 
-/* line 262, src/assets/scss/_custom-styles.scss */
+/* line 261, src/assets/scss/_custom-styles.scss */
 .parallax {
   min-height: 280px;
   position: relative;
@@ -57214,12 +57411,12 @@ button.md-toast-close-button {
   background-size: cover;
 }
 
-/* line 270, src/assets/scss/_custom-styles.scss */
+/* line 269, src/assets/scss/_custom-styles.scss */
 .parallax .title {
   height: 100%;
 }
 
-/* line 274, src/assets/scss/_custom-styles.scss */
+/* line 273, src/assets/scss/_custom-styles.scss */
 .parallax .parallax-content {
   height: 280px;
   position: relative;
@@ -57227,7 +57424,7 @@ button.md-toast-close-button {
   z-index: 20;
 }
 
-/* line 282, src/assets/scss/_custom-styles.scss */
+/* line 281, src/assets/scss/_custom-styles.scss */
 .img-lg {
   -o-object-fit: cover;
      object-fit: cover;
@@ -57235,24 +57432,24 @@ button.md-toast-close-button {
   width: 100%;
 }
 
-/* line 288, src/assets/scss/_custom-styles.scss */
+/* line 287, src/assets/scss/_custom-styles.scss */
 .page-head {
   height: 150px;
 }
 
-/* line 291, src/assets/scss/_custom-styles.scss */
+/* line 290, src/assets/scss/_custom-styles.scss */
 .page-head h1 {
   padding: 0;
   margin: 0;
 }
 
-/* line 296, src/assets/scss/_custom-styles.scss */
+/* line 295, src/assets/scss/_custom-styles.scss */
 .page-head .breadcrumb-r {
   background: none;
   margin: 0;
 }
 
-/* line 300, src/assets/scss/_custom-styles.scss */
+/* line 299, src/assets/scss/_custom-styles.scss */
 .page-head .breadcrumb-r ol {
   padding: 0;
   margin: 0;
@@ -57265,7 +57462,7 @@ button.md-toast-close-button {
   width: 100%;
 }
 
-/* line 311, src/assets/scss/_custom-styles.scss */
+/* line 312, src/assets/scss/_custom-styles.scss */
 .services {
   height: 100vh;
   width: 100%;
@@ -57276,7 +57473,7 @@ button.md-toast-close-button {
   background-size: cover;
 }
 
-/* line 320, src/assets/scss/_custom-styles.scss */
+/* line 321, src/assets/scss/_custom-styles.scss */
 .services header {
   height: 10vh;
   -webkit-box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22) !important;
@@ -57284,25 +57481,25 @@ button.md-toast-close-button {
   z-index: 100;
 }
 
-/* line 325, src/assets/scss/_custom-styles.scss */
+/* line 326, src/assets/scss/_custom-styles.scss */
 .services header h1 {
   margin: 0;
   margin: 24px 0 24px 0;
 }
 
 @media (max-width: 768px) {
-  /* line 320, src/assets/scss/_custom-styles.scss */
+  /* line 321, src/assets/scss/_custom-styles.scss */
   .services header {
     height: 5vh;
   }
-  /* line 331, src/assets/scss/_custom-styles.scss */
+  /* line 334, src/assets/scss/_custom-styles.scss */
   .services header h1 {
     margin: 0;
     margin: 10px 0 10px 0;
   }
 }
 
-/* line 339, src/assets/scss/_custom-styles.scss */
+/* line 342, src/assets/scss/_custom-styles.scss */
 .services .services_main {
   padding: 10px 0 100px 0;
   height: 80vh;
@@ -57310,25 +57507,25 @@ button.md-toast-close-button {
   margin: 0;
 }
 
-/* line 346, src/assets/scss/_custom-styles.scss */
+/* line 349, src/assets/scss/_custom-styles.scss */
 .services footer {
   height: 5vh;
   background: transparent !important;
 }
 
-/* line 350, src/assets/scss/_custom-styles.scss */
+/* line 353, src/assets/scss/_custom-styles.scss */
 .services footer.page-footer {
   padding: 0;
   background: transparent !important;
   bottom: 0;
 }
 
-/* line 355, src/assets/scss/_custom-styles.scss */
+/* line 358, src/assets/scss/_custom-styles.scss */
 .services footer.page-footer .container-fluid, .services footer.page-footer .container-sm, .services footer.page-footer .container-md, .services footer.page-footer .container-lg, .services footer.page-footer .container-xl {
   width: auto;
 }
 
-/* line 359, src/assets/scss/_custom-styles.scss */
+/* line 362, src/assets/scss/_custom-styles.scss */
 .services footer.page-footer .footer-copyright {
   padding: 0;
   overflow: hidden;
@@ -57336,27 +57533,27 @@ button.md-toast-close-button {
 }
 
 @media (max-width: 768px) {
-  /* line 359, src/assets/scss/_custom-styles.scss */
+  /* line 362, src/assets/scss/_custom-styles.scss */
   .services footer.page-footer .footer-copyright {
     font-size: small;
   }
 }
 
-/* line 366, src/assets/scss/_custom-styles.scss */
+/* line 371, src/assets/scss/_custom-styles.scss */
 .services footer.page-footer .footer-copyright span {
   padding: 0;
   margin: 0;
   font-size: 12px;
 }
 
-/* line 371, src/assets/scss/_custom-styles.scss */
+/* line 376, src/assets/scss/_custom-styles.scss */
 .services footer.page-footer .footer-copyright span .fa {
   animation: loves .35s infinite alternate;
   -webkit-animation: loves .35s infinite alternate;
   color: #E90606;
 }
 
-/* line 384, src/assets/scss/_custom-styles.scss */
+/* line 390, src/assets/scss/_custom-styles.scss */
 .blog .blog-content h2 {
   font-size: larger;
   font-weight: bold;
@@ -57364,19 +57561,19 @@ button.md-toast-close-button {
 }
 
 @media (max-width: 768px) {
-  /* line 384, src/assets/scss/_custom-styles.scss */
+  /* line 390, src/assets/scss/_custom-styles.scss */
   .blog .blog-content h2 {
     padding-top: 20px;
   }
 }
 
-/* line 393, src/assets/scss/_custom-styles.scss */
+/* line 401, src/assets/scss/_custom-styles.scss */
 .blog .blog-content .list-group .list-group-item {
   padding: 5px;
   font-size: small;
 }
 
-/* line 398, src/assets/scss/_custom-styles.scss */
+/* line 407, src/assets/scss/_custom-styles.scss */
 .blog .blog-content .article {
   margin-bottom: 10px;
   margin-top: 10px;
@@ -57388,10 +57585,107 @@ button.md-toast-close-button {
   -webkit-box-orient: vertical;
 }
 
-/* line 411, src/assets/scss/_custom-styles.scss */
+/* line 421, src/assets/scss/_custom-styles.scss */
 .avatar-small {
   width: 31px;
   height: 31px;
+}
+
+/* line 427, src/assets/scss/_custom-styles.scss */
+.fixed-sn main {
+  margin-right: 1%;
+  margin-left: 1%;
+  padding-top: 4.5rem !important;
+}
+
+/* line 434, src/assets/scss/_custom-styles.scss */
+.bg-gray {
+  background-color: #f8faff;
+}
+
+/* line 438, src/assets/scss/_custom-styles.scss */
+.siapm-skin section {
+  padding: 50px 0 50px 0;
+}
+
+/* line 442, src/assets/scss/_custom-styles.scss */
+.wellcome {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+/* line 450, src/assets/scss/_custom-styles.scss */
+.wellcome .wellcome_c {
+  min-height: 100vh;
+}
+
+/* line 453, src/assets/scss/_custom-styles.scss */
+.wellcome .wellcome_c .wellcome_c_m {
+  padding-top: 150px;
+}
+
+@media (max-width: 992px) {
+  /* line 453, src/assets/scss/_custom-styles.scss */
+  .wellcome .wellcome_c .wellcome_c_m {
+    text-align: center;
+  }
+}
+
+/* line 460, src/assets/scss/_custom-styles.scss */
+.wellcome .wellcome_c .wellcome_c_b {
+  bottom: 20px;
+}
+
+/* line 467, src/assets/scss/_custom-styles.scss */
+.card-count p {
+  margin: 0;
+}
+
+/* line 470, src/assets/scss/_custom-styles.scss */
+.card-count .count-p {
+  font-size: small;
+  width: 100%;
+}
+
+/* line 473, src/assets/scss/_custom-styles.scss */
+.card-count .count-p .count {
+  font-weight: 500;
+  display: block;
+  font-size: large;
+}
+
+@media (min-width: 992px) {
+  /* line 480, src/assets/scss/_custom-styles.scss */
+  .card-count i {
+    float: right !important;
+  }
+}
+
+@media (max-width: 992px) {
+  /* line 466, src/assets/scss/_custom-styles.scss */
+  .card-count {
+    text-align: center;
+  }
+}
+
+/* line 490, src/assets/scss/_custom-styles.scss */
+.vh-30 {
+  min-height: 30vh;
+  max-height: 50vh;
+}
+
+/* line 494, src/assets/scss/_custom-styles.scss */
+.vh-50 {
+  min-height: 50vh;
+}
+
+/* line 497, src/assets/scss/_custom-styles.scss */
+.vh-10 {
+  height: 10vh;
 }
 
 /*# sourceMappingURL=../../../scss */

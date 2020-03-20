@@ -41,7 +41,8 @@ exports.modules = [
   './js/vendor/free/enhanced-modals.js',
   './js/dist/free/treeview.js',
   './js/vendor/free/bs-custom-file-input.js',
-  './js/dist/pro/sticky.js'
+  './js/dist/pro/sticky.js',
+  './js/pallete.js'
   // './js/vendor/addons/jquery.zmd.hierarchical-display.js/',
   // './js/vendor/addons/masonry.pkgd.min.js',
   // './js/vendor/addons/imagesloaded.pkgd.min.js',

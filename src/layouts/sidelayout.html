@@ -1,6 +1,6 @@
 {{!-- This is the base layout for your project, and will be used on every page. --}}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
   <title>{{title}} - Website {{base.desa}}</title>
@@ -29,26 +29,18 @@
 
 
 </head>
-<!-- Warna TEMA
 
-white-skin
-black-skin
-cyan-skin
-mdb-skin
-deep-purple-skin
-navy-blue-skin
-pink-skin
-indigo-skin
-light-blue-skin
-grey-skin
--->
-
-<body class="mdb-skin services" data-bg="http://rakyatjateng.fajar.co.id/wp-content/uploads/2017/08/70.jpg">
-  {{> header}}
-  <main role="main" >
+<body class="fixed-sn siapm-skin">
+  <div id="mdb-preloader" class="flex-center">
+    <div id="preloader-markup">
+    </div>
+  </div>
+  {{> double-navigation}}
+  <main>
     {{> body}}
   </main>
-  {{> footer2}}
+  {{> footer}}
+
 </body>
 
 </html>

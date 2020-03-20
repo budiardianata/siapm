@@ -51592,8 +51592,24 @@ jQuery(function ($) {
     });
   };
 });
-(function($) {
+(function ($) {
   "use strict";
+  $(document).ready(() => {
+    $('.mdb-select').materialSelect({});
+    $(".button-collapse").sideNav();
+    new WOW().init();
+  });
+  $('.count').each(function () {
+    var size = $(this).text().split(".")[1] ? $(this).text().split(".")[1].length : 0;
+    $(this).prop('Counter', 0).animate({
+      Counter: $(this).text()
+    }, {
+      duration: 2000,
+      step: function (func) {
+        $(this).text(parseFloat(func).toFixed(size));
+      }
+    });
+  });
   new WOW().init();
   objectFitImages();
   jarallax(document.querySelectorAll(".jarallax"));
@@ -51622,12 +51638,44 @@ jQuery(function ($) {
     "beforeend",
     "<br><span>Made with <i class='fa fa-heart pulse'></i> by <a href='https://bit.ly/3cbVfOh' target='_blank'>Pustaka Digital</a></span>"
   );
-
+  // Collapsible Card
+  $('a[data-action="collapse"]').on("click", function (e) {
+    e.preventDefault();
+    $(this)
+      .closest(".card")
+      .children(".card-content")
+      .collapse("toggle");
+    $(this)
+      .closest(".card")
+      .find('[data-action="collapse"]')
+      .toggleClass("rotate");
+  });
+  $('[data-toggle="tooltip"]').tooltip()
+  // Toggle fullscreen
+  $('a[data-action="expand"]').on("click", function (e) {
+    e.preventDefault();
+    $(this)
+      .closest(".card")
+      .find('[data-action="expand"] i')
+      .toggleClass("fa-expand fa-compress");
+    $(this)
+      .closest(".card")
+      .toggleClass("card-fullscreen");
+  });
+  // Close Card
+  $('a[data-action="close"]').on("click", function () {
+    $(this).closest(".card").removeClass().slideUp("fast");
+  });
+  $(".heading-elements-toggle").on("click", function () {
+    $(this)
+      .next(".heading-elements")
+      .toggleClass("visible");
+  });
   function toggleDropdown(e) {
     var _d = $(e.target).closest(".dropdown"),
       _m = $(".dropdown-menu", _d);
     setTimeout(
-      function() {
+      function () {
         var shouldOpen = e.type !== "click" && _d.is(":hover");
         _m.toggleClass("show", shouldOpen);
         _d.toggleClass("show", shouldOpen);
@@ -51636,19 +51684,33 @@ jQuery(function ($) {
       e.type === "mouseleave" ? 300 : 0
     );
   }
-
+  $(document).ready(function () {
+    $("#searchKecDes").on("keyup", function () {
+      var value = $(this).val().toLowerCase();
+      $("#dtKecDes *").filter(function () {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+  });
   $("body")
     .on("mouseenter mouseleave", ".dropdown", toggleDropdown)
     .on("click", ".dropdown-menu a", toggleDropdown);
 
-  $(".parallax").each(function() {
+  $(".parallax").each(function () {
     if ($(this).attr("data-bg")) {
       $(this).css({
         "background-image": "url(" + $(this).data("bg") + ")"
       });
     }
   });
-  $(".services").each(function() {
+  $(".wellcome").each(function () {
+    if ($(this).attr("data-bg")) {
+      $(this).css({
+        "background-image": "url(" + $(this).data("bg") + ")"
+      });
+    }
+  });
+  $(".services").each(function () {
     if ($(this).attr("data-bg")) {
       $(this).css({
         "background-image": "url(" + $(this).data("bg") + ")"
@@ -51715,19 +51777,19 @@ jQuery(function ($) {
     }
   });
 
-  $(".next-portofolio").click(function() {
+  $(".next-portofolio").click(function () {
     owl.trigger("next.owl.carousel");
   });
-  $(".prev-portofolio").click(function() {
+  $(".prev-portofolio").click(function () {
     owl.trigger("prev.owl.carousel");
   });
   var script = document.createElement('script');
-script.onload = function () {
+  script.onload = function () {
     //do stuff with the script
-};
-script.src = "https://widget.kominfo.go.id/gpr-widget-kominfo.min.js";
+  };
+  script.src = "https://widget.kominfo.go.id/gpr-widget-kominfo.min.js";
 
-document.body.appendChild(script);
+  document.body.appendChild(script);
 })(jQuery);
 
 //# sourceMappingURL=main.js.map

@@ -16,7 +16,7 @@ jQuery(($) => {
         menuWidth: 240,
         edge: 'left',
         closeOnClick: false,
-        breakpoint: 1440,
+        breakpoint: 1200,
         timeDurationOpen: 300,
         timeDurationClose: 200,
         timeDurationOverlayOpen: 50,

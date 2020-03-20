@@ -1,0 +1,152 @@
+---
+layout: siapm
+title: Beranda
+desc: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, deleniti odit. Dolorum provident placeat
+image: assets/img/av.png
+---
+<div class="rgba-skin" >
+  <div class="wellcome" data-bg="assets/img/bg.svg">
+    <div class="container">
+      <div class="row d-flex wellcome_c">
+        <div class="col-12 col-md-6 wellcome_c_m">
+          <h1 class="display-5">Portal <span>SIAPM</span></h1>
+          <p>Layanan Terpadu Sistem Informasi Dan Administrasi Pekon Modern Kabupaten Lampung Barat.</p>
+            <a class="btn btn-sm btn-outline-primary waves-effect btn-icon-text">
+              <i class="fab fa-google-play btn-icon-prepend fa-3x pr-2"></i>
+              <span class="d-inline-block text-left">
+                <small class="d-block">Download Aplikasi</small> Google Play
+              </span>
+            </a>
+        </div>
+        <div class="col-12 mt-lg-5 mt-3 align-bottom wellcome_c_b mt-4">
+          <div class="wow fadeIn">
+            <div class="p-0">
+              <div class="row mx-0 wow zoomIn">
+                {{#repeat 3}}
+                <div class="col-6 col-md-3 mx-auto mb-3 mt-3">
+                  <div class="card card-count">
+                    <div class="card-body">
+                      <i class="fa fa-users fa-3x text-primary"></i>
+                      <p class="count-p" class="mb-0">Kecamatan
+                        <span class="count text-primary">2</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-3 mx-auto mb-3 mt-3">
+                  <div class="card card-count">
+                    <div class="card-body">
+                      <i class="fa fa-users fa-3x text-primary"></i>
+                      <p class="count-p" class="mb-0">Pekon
+                        <span class="count text-primary">20</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-3 mx-auto mb-3 mt-3">
+                  <div class="card card-count">
+                    <div class="card-body">
+                      <i class="fa fa-users fa-3x text-primary"></i>
+                      <p class="count-p" class="mb-0">Total Penduduk
+                        <span class="count text-primary">1000</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-3 mx-auto mb-3 mt-3">
+                  <div class="card card-count">
+                    <div class="card-body">
+                      <i class="fa fa-users fa-3x text-primary"></i>
+                      <p class="count-p" class="mb-0">Penduduk Disabilitas
+                        <span class="count text-primary">50</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                {{/repeat}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="bg-gray">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-12">
+        <h2 class="text-center font-weight-bold mb-4 pb-2 text-primary wow fadeIn "> <a href="statistiksiapm.html"> Data Statistik</a></h2>
+        <div class=" wow fadeIn ">
+          <div class="p-0">
+            <div class="row mx-0 wow zoomIn text-center">
+              {{#repeat 16}}
+              <div class="col-6 col-md-3 mx-auto justify-content-center mb-3 mt-3">
+                <a href="statistiksiapm.html" class="card zoomable">
+                  <div class="card-body ">
+                    <p><i class="fas fa-place-of-worship fa-2x text-primary"></i></p>
+                    <p class="mb-0">Kec. Pagar Dewa</p>
+                  </div>
+                </a>
+              </div>
+              {{/repeat}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="magazine-section dark-grey-text">
+      <h2 class="font-weight-bold pb-2 text-primary"> <a href="kabarSiapm.html">Kabar Pekon</a></h2>
+      <div class="row">
+        <div class="col-lg-6 col-md-12 mb-4">
+          <div class="single-news wow fadeIn">
+            <div class="view overlay rounded z-depth-1-half mb-4">
+              <img class="img-fluid img-lg"
+                src="https://upload.wikimedia.org/wikipedia/id/a/aa/Lambang_Kabupaten_Lampung_Barat.jpg"
+                alt="Sample image">
+              <a>
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+            <h3 class="font-weight-bold dark-grey-text mb-3 text-truncate"><a>Title Article</a></h3>
+            <p class="dark-grey-text">Deskripsi 20 kata ipsum dolor sit amet consectetur adipisicing elit.
+              Suscipit, minus reprehenderit. Vero reiciendis at iure explicabo consequatur totam assumenda
+              placeat.</p>
+
+          </div>
+          <!-- Featured news -->
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-lg-6 col-md-12 mb-4">
+          {{#repeat 6}}
+          {{>item-article-list-sm}}
+          {{/repeat}}
+        </div>
+        <!--Grid column-->
+
+      </div>
+    </div>
+  </div>
+</section>
+<section class="bg-gray">
+  <div class="container">
+    <h2 class="text-center font-weight-bold mb-4 pb-2 text-primary wow fadeIn"><a href="produkSiapm.html">Produk-Produk Pekon</a></h2>
+    <div class="row">
+      {{#repeat 8}}
+      {{>item-product}}
+      {{/repeat}}
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <a href="" class="btn btn-sm btn-primary waves-effect">Lebih Banyak Produk BUMDES</a>
+      </div>
+    </div>
+  </div>
+</section>
